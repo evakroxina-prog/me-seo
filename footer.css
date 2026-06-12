@@ -170,28 +170,42 @@
   border-bottom-color: rgba(245, 166, 35, 0.85);
 }
 
+/* Шапка: лого M:E agency — эталон landing.marketexpert.cz */
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
   text-decoration: none;
   color: #fff;
   min-width: 0;
 }
+@media (min-width: 640px) {
+  .nav-brand { gap: 12px; }
+}
 .nav-brand__img {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   flex-shrink: 0;
   display: block;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
 }
+@media (min-width: 640px) {
+  .nav-brand__img { width: 40px; height: 40px; }
+}
 .nav-brand__text {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(18px, 2.6vw, 22px);
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1;
+  color: #fff;
+}
+@media (min-width: 640px) {
+  .nav-brand__text { font-size: 18px; }
+}
+@media (min-width: 1024px) {
+  .nav-brand__text { font-size: 20px; }
 }
 .nav-brand__agency {
   font-style: italic;
