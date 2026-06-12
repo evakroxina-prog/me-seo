@@ -1,15 +1,17 @@
 /**
- * GA4 + cookie consent — общий для всех лендингов marketexpert.cz
+ * GA4 + Microsoft Clarity + cookie consent — общий для всех лендингов marketexpert.cz
  * Ключ localStorage: cookie_consent (yes | no)
  *
  * Опционально в <head>:
  *   window.__GA4_MEASUREMENT_ID__ = 'G-SPKHXMCQGM';
  *   window.__GA4_ADS_ID__ = 'AW-11432613975';  // только для РК-лендингов
  *   window.__GA4_ADS_LEAD_SEND_TO__ = 'AW-11432613975/XXXXXXXX';  // метка конверсии из Google Ads
+ *   window.__CLARITY_PROJECT_ID__ = 'qqt5aodv7n';  // тот же проект, что на marketexpert.cz (GTM)
  */
 (function () {
   var COOKIE_KEY = 'cookie_consent';
   var DEFAULT_GA4 = 'G-SPKHXMCQGM';
+  var DEFAULT_CLARITY = 'qqt5aodv7n';
 
   function validGa4(id) {
     return typeof id === 'string' && /^G-[A-Z0-9]+$/i.test(id);
@@ -51,8 +53,47 @@
     };
   }
 
-  window.loadGA = loadGA4;
+  function clarityId() {
+    var raw = typeof window.__CLARITY_PROJECT_ID__ === 'string'
+      ? window.__CLARITY_PROJECT_ID__.trim()
+      : '';
+    return /^[a-z0-9]+$/i.test(raw) ? raw : DEFAULT_CLARITY;
+  }
+
+  function grantClarityConsent() {
+    if (typeof window.clarity !== 'function') return;
+    try {
+      window.clarity('consentv2', {
+        ad_Storage: 'granted',
+        analytics_Storage: 'granted'
+      });
+    } catch (_) {}
+  }
+
+  function loadClarity() {
+    if (window.__clarityLoaded) return;
+    window.__clarityLoaded = true;
+    var id = clarityId();
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', id);
+    grantClarityConsent();
+  }
+
+  function loadAnalytics() {
+    loadGA4();
+    loadClarity();
+  }
+
+  window.loadGA = loadAnalytics;
   window.loadGA4 = loadGA4;
+  window.loadClarity = loadClarity;
+  window.loadAnalytics = loadAnalytics;
 
   function leadSendTo() {
     var raw = typeof window.__GA4_ADS_LEAD_SEND_TO__ === 'string'
@@ -63,7 +104,7 @@
 
   function trackLeadConversion(meta) {
     if (getConsent() !== 'yes') return;
-    if (!window.__ga4Loaded) loadGA4();
+    if (!window.__ga4Loaded) loadAnalytics();
     if (typeof window.gtag !== 'function') return;
 
     var data = meta || {};
@@ -110,7 +151,7 @@
 
     var stored = getConsent();
     if (stored === 'yes') {
-      loadGA4();
+      loadAnalytics();
       banner.remove();
       return;
     }
@@ -137,7 +178,7 @@
     if (accept) {
       accept.addEventListener('click', function () {
         setConsent('yes');
-        loadGA4();
+        loadAnalytics();
         close();
       });
     }
