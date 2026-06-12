@@ -1,17 +1,36 @@
 /**
  * GA4 + Microsoft Clarity + cookie consent — общий для всех лендингов marketexpert.cz
  * Ключ localStorage: cookie_consent (yes | no)
+ * Скрипты аналитики не загружаются до явного согласия (Принять).
  *
  * Опционально в <head>:
  *   window.__GA4_MEASUREMENT_ID__ = 'G-SPKHXMCQGM';
  *   window.__GA4_ADS_ID__ = 'AW-11432613975';  // только для РК-лендингов
  *   window.__GA4_ADS_LEAD_SEND_TO__ = 'AW-11432613975/XXXXXXXX';  // метка конверсии из Google Ads
- *   window.__CLARITY_PROJECT_ID__ = 'qqt5aodv7n';  // тот же проект, что на marketexpert.cz (GTM)
+ *   window.__CLARITY_PROJECT_ID__ = 'qqt5aodv7n';
  */
 (function () {
   var COOKIE_KEY = 'cookie_consent';
   var DEFAULT_GA4 = 'G-SPKHXMCQGM';
   var DEFAULT_CLARITY = 'qqt5aodv7n';
+
+  function getConsent() {
+    try {
+      return localStorage.getItem(COOKIE_KEY);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function setConsent(v) {
+    try {
+      localStorage.setItem(COOKIE_KEY, v);
+    } catch (_) {}
+  }
+
+  function hasConsent() {
+    return getConsent() === 'yes';
+  }
 
   function validGa4(id) {
     return typeof id === 'string' && /^G-[A-Z0-9]+$/i.test(id);
@@ -35,24 +54,6 @@
     return validAds(raw) ? raw : null;
   }
 
-  function loadGA4() {
-    if (window.__ga4Loaded) return;
-    window.__ga4Loaded = true;
-    var id = ga4Id();
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag() { window.dataLayer.push(arguments); };
-    gtag('js', new Date());
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
-    document.head.appendChild(s);
-    s.onload = function () {
-      gtag('config', id);
-      var aw = adsId();
-      if (aw) gtag('config', aw);
-    };
-  }
-
   function clarityId() {
     var raw = typeof window.__CLARITY_PROJECT_ID__ === 'string'
       ? window.__CLARITY_PROJECT_ID__.trim()
@@ -70,8 +71,33 @@
     } catch (_) {}
   }
 
-  function loadClarity() {
-    if (window.__clarityLoaded) return;
+  function revokeClarity() {
+    if (typeof window.clarity !== 'function') return;
+    try {
+      window.clarity('consent', false);
+    } catch (_) {}
+  }
+
+  function bootGA4() {
+    if (!hasConsent() || window.__ga4Loaded) return;
+    window.__ga4Loaded = true;
+    var id = ga4Id();
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() { window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+    document.head.appendChild(s);
+    s.onload = function () {
+      gtag('config', id);
+      var aw = adsId();
+      if (aw) gtag('config', aw);
+    };
+  }
+
+  function bootClarity() {
+    if (!hasConsent() || window.__clarityLoaded) return;
     window.__clarityLoaded = true;
     var id = clarityId();
     (function (c, l, a, r, i, t, y) {
@@ -79,20 +105,20 @@
       t = l.createElement(r);
       t.async = 1;
       t.src = 'https://www.clarity.ms/tag/' + i;
+      t.onload = function () { grantClarityConsent(); };
       y = l.getElementsByTagName(r)[0];
       y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', id);
-    grantClarityConsent();
   }
 
   function loadAnalytics() {
-    loadGA4();
-    loadClarity();
+    if (!hasConsent()) return;
+    bootGA4();
+    bootClarity();
   }
 
   window.loadGA = loadAnalytics;
-  window.loadGA4 = loadGA4;
-  window.loadClarity = loadClarity;
+  window.loadGA4 = bootGA4;
   window.loadAnalytics = loadAnalytics;
 
   function leadSendTo() {
@@ -103,7 +129,7 @@
   }
 
   function trackLeadConversion(meta) {
-    if (getConsent() !== 'yes') return;
+    if (!hasConsent()) return;
     if (!window.__ga4Loaded) loadAnalytics();
     if (typeof window.gtag !== 'function') return;
 
@@ -130,20 +156,6 @@
   }
 
   window.trackLeadConversion = trackLeadConversion;
-
-  function getConsent() {
-    try {
-      return localStorage.getItem(COOKIE_KEY);
-    } catch (_) {
-      return null;
-    }
-  }
-
-  function setConsent(v) {
-    try {
-      localStorage.setItem(COOKIE_KEY, v);
-    } catch (_) {}
-  }
 
   function initCookieBanner() {
     var banner = document.getElementById('cookie-banner');
@@ -185,6 +197,7 @@
     if (reject) {
       reject.addEventListener('click', function () {
         setConsent('no');
+        revokeClarity();
         close();
       });
     }
