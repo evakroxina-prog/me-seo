@@ -150,9 +150,26 @@
       pointer.y = (e.clientY - r.top) * (canvas.height / r.height);
     }
 
+    function isTouchUi() {
+      return window.matchMedia && (
+        window.matchMedia('(pointer: coarse)').matches ||
+        window.matchMedia('(max-width: 960px)').matches
+      );
+    }
+
     function bind() {
-      canvas.style.touchAction = 'none';
-      pointerEl.style.touchAction = 'none';
+      var touchUi = isTouchUi();
+      if (touchUi) {
+        canvas.style.pointerEvents = 'none';
+        canvas.style.touchAction = 'pan-y';
+        if (pointerEl !== canvas) {
+          pointerEl.style.touchAction = 'pan-y';
+        }
+      } else {
+        canvas.style.pointerEvents = 'auto';
+        canvas.style.touchAction = 'none';
+        if (pointerEl === canvas) pointerEl.style.touchAction = 'none';
+      }
       pointerEl.addEventListener('pointermove', onPointer, { passive: true });
       pointerEl.addEventListener('pointerdown', function (e) {
         if (e.target.closest && e.target.closest('a, button')) return;

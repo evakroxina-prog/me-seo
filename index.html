@@ -173,7 +173,13 @@ nav.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-
   font-family: 'Montserrat', sans-serif; font-size: clamp(28px, 4vw, 46px); font-weight: 800;
   line-height: 1.15; color: #fff; margin-bottom: 20px; min-height: 3.2em;
   text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  position: relative;
 }
+.hero-h1-seo {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.hero-type-visual { display: block; }
 .hero-type-accent { color: var(--orange); }
 .hero-cursor { display: inline-block; color: var(--orange); font-weight: 400; margin-left: 1px; animation: heroBlink 0.85s step-end infinite; }
 .hero-typer.is-done .hero-cursor { display: none; }
@@ -455,6 +461,7 @@ section { padding: 80px 48px; }
 .faq-more-btn:hover { border-color: rgba(232,148,26,.5); color: var(--orange); }
 .faq-more-btn-icon { font-size: 12px; transition: transform .25s ease; }
 .faq-more-btn[aria-expanded="true"] .faq-more-btn-icon { transform: rotate(180deg); }
+.faq-more.is-collapsed { display: none; }
 .order-s { background: var(--burg); position: relative; overflow: hidden; padding: 96px 48px; }
 .order-in { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1050px; margin: 0 auto; position: relative; z-index: 2; }
 .order-l .section-label { color: var(--orange); }
@@ -541,7 +548,8 @@ section { padding: 80px 48px; }
   section, .agency-block { padding: 56px 24px; }
   .hero { padding: 100px 24px 48px; touch-action: pan-y; }
   .hero-ascii-stage { touch-action: pan-y; pointer-events: none; }
-  .hero-bg, .hero-inner { touch-action: pan-y; }
+  .hero-bg { touch-action: pan-y; pointer-events: auto; }
+  .hero-inner { touch-action: pan-y; pointer-events: none; }
   .hero-copy { width: 100% !important; }
   .hero-ticker__track { font-size: 11px; }
   .for-whom-inner { grid-template-columns: 1fr; gap: 36px; }
@@ -649,8 +657,11 @@ section { padding: 80px 48px; }
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="hero-label">SEO для бизнеса · Прага и Чехия</div>
-      <h1 class="hero-typer" data-lines='["Сайт есть —","клиентов из Google","нет?"]' aria-label="Сайт есть — клиентов из Google нет?">
-        <span class="hero-type-text" aria-hidden="true"></span><span class="hero-cursor" aria-hidden="true">▌</span>
+      <h1 class="hero-typer" data-lines='["Сайт есть —","клиентов из Google","нет?"]'>
+        <span class="hero-h1-seo">SEO для бизнеса в Праге: сайт есть — клиентов из Google нет?</span>
+        <span class="hero-type-visual" aria-hidden="true">
+          <span class="hero-type-text"></span><span class="hero-cursor">▌</span>
+        </span>
       </h1>
       <p>SEO-аудит, техническая оптимизация, контент, ведение и адаптация под AI-поисковики (Google AI Overviews). Бесплатная первичная консультация 20–30 минут — разберём, нужен ли вам SEO и с чего начать. Без пакетов и длинных контрактов.</p>
       <div class="hero-btns">
@@ -879,7 +890,7 @@ section { padding: 80px 48px; }
       </ul>
       <p>Локальное SEO (Google Business Profile, отзывы) — отдельное направление, подробнее на <a href="https://reputation.marketexpert.cz" target="_blank" rel="noopener noreferrer">reputation.marketexpert.cz</a>.</p>
     </details>
-    <div class="faq-more" id="faqMore" hidden>
+    <div class="faq-more is-collapsed" id="faqMore">
       <details class="faq-item">
         <summary>Делаете ли вы наращивание ссылок (link building)?</summary>
         <p>Нет, закупку и массовое размещение ссылок не продаём. В аудите оцениваем текущий ссылочный профиль и даём рекомендации: что исправить, что не трогать, какие есть риски. On-page, контент и технику делаем сами; off-page — только в формате консультаций.</p>
@@ -1075,10 +1086,11 @@ section { padding: 80px 48px; }
     }
     var canvas = document.getElementById('heroAsciiStage');
     if (canvas && window.initAsciiHero) {
+      var heroBg = document.querySelector('#hero .hero-bg');
       window.initAsciiHero(canvas, {
         bgR: 20, bgG: 8, bgB: 14,
         charSize: window.innerWidth < 768 ? 15 : 20,
-        pointerEl: canvas
+        pointerEl: heroBg || canvas
       });
     }
     if (heroTyper) startTyper(heroTyper, { speed: 48, linePause: 380, delay: 400 });
@@ -1155,8 +1167,8 @@ section { padding: 80px 48px; }
   if (!more || !btn) return;
   var label = btn.querySelector('.faq-more-btn-label');
   btn.addEventListener('click', function(){
-    var opening = more.hidden;
-    more.hidden = !opening;
+    var opening = more.classList.contains('is-collapsed');
+    more.classList.toggle('is-collapsed', !opening);
     btn.setAttribute('aria-expanded', String(opening));
     if (label) label.textContent = opening ? btn.dataset.labelHide : btn.dataset.labelShow;
   });
