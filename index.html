@@ -142,6 +142,7 @@ nav.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-
 .lang-switch__option:hover { background: rgba(255,255,255,.1); color: #fff; }
 .hero {
   min-height: 100vh; position: relative; overflow: hidden;
+  scroll-margin-top: 68px;
   display: flex; align-items: center; padding: 100px 48px 60px;
   background: var(--burg);
 }
@@ -538,7 +539,9 @@ section { padding: 80px 48px; }
   nav.nav-open .nav-links { opacity: 1; visibility: visible; pointer-events: auto; }
   .nav-links .nav-link { padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   section, .agency-block { padding: 56px 24px; }
-  .hero { padding: 100px 24px 48px; }
+  .hero { padding: 100px 24px 48px; touch-action: pan-y; }
+  .hero-ascii-stage { touch-action: pan-y; pointer-events: none; }
+  .hero-bg, .hero-inner { touch-action: pan-y; }
   .hero-copy { width: 100% !important; }
   .hero-ticker__track { font-size: 11px; }
   .for-whom-inner { grid-template-columns: 1fr; gap: 36px; }
@@ -579,11 +582,12 @@ section { padding: 80px 48px; }
 </style>
 <link rel="stylesheet" href="footer.css">
 <link rel="stylesheet" href="cookie.css">
+<link rel="stylesheet" href="form-success.css">
 </head>
 <body>
 
 <nav aria-label="Меню страницы">
-  <a href="https://marketexpert.cz/" class="nav-logo nav-brand">
+  <a href="#hero" class="nav-logo nav-brand">
     <img src="logo.png" alt="M:E agency" class="nav-brand__img" decoding="async">
     <span class="nav-brand__text">M:E <em class="nav-brand__agency">agency</em></span>
   </a>
@@ -1024,6 +1028,7 @@ section { padding: 80px 48px; }
 <script src="ascii-hero.js"></script>
 <script src="cyber-wave.js"></script>
 <script src="me-analytics.js"></script>
+<script src="form-success.js"></script>
 <script>
 (function(){
   function showTyperStatic(typer) {
@@ -1070,11 +1075,10 @@ section { padding: 80px 48px; }
     }
     var canvas = document.getElementById('heroAsciiStage');
     if (canvas && window.initAsciiHero) {
-      var hero = document.getElementById('hero');
       window.initAsciiHero(canvas, {
         bgR: 20, bgG: 8, bgB: 14,
         charSize: window.innerWidth < 768 ? 15 : 20,
-        pointerEl: hero || canvas
+        pointerEl: canvas
       });
     }
     if (heroTyper) startTyper(heroTyper, { speed: 48, linePause: 380, delay: 400 });
@@ -1192,7 +1196,14 @@ document.addEventListener('submit', function(e){
         }
         btn.innerHTML = '<span>✓ Заявка отправлена</span>';
         btn.classList.add('is-submitted');
+        btn.disabled = true;
         form.reset();
+        if (typeof window.showFormSuccess === 'function') {
+          window.showFormSuccess({
+            lang: (form.querySelector('input[name="jazyk"]') || {}).value || 'ru',
+            email: 'seo@marketexpert.cz'
+          });
+        }
         return;
       }
       btn.innerHTML = original; btn.disabled = false;
