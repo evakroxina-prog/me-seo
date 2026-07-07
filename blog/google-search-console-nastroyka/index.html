@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как настроить Google Search Console: пошагово для владельца сайта | M:E Agency</title>
+<meta name="description" content="Подтверждение сайта, sitemap, отчёты об индексации и типичные ошибки — пошагово для бизнеса в Чехии.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/">
+<link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/">
+<link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="M:E Agency">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/">
+<meta property="og:title" content="Как настроить Google Search Console: пошагово для владельца сайта">
+<meta property="og:description" content="Подтверждение сайта, sitemap, отчёты об индексации и типичные ошибки — пошагово для бизнеса в Чехии.">
+<meta property="og:image" content="https://seo.marketexpert.cz/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как настроить Google Search Console: пошагово для владельца сайта | M:E Agency">
+<meta name="twitter:description" content="Подтверждение сайта, sitemap, отчёты об индексации и типичные ошибки — пошагово для бизнеса в Чехии.">
+<meta name="twitter:image" content="https://seo.marketexpert.cz/logo.png">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/footer.css">
+<link rel="stylesheet" href="/blog/blog.css?v=20260707e">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как настроить Google Search Console: пошагово для владельца сайта","description":"Подтверждение сайта, sitemap, отчёты об индексации и типичные ошибки — пошагово для бизнеса в Чехии.","inLanguage":"ru","mainEntityOfPage":"https://seo.marketexpert.cz/blog/google-search-console-nastroyka/","image":"https://seo.marketexpert.cz/logo.png","author":{"@type":"Organization","name":"M:E Agency"},"publisher":{"@type":"Organization","name":"M:E Agency","logo":{"@type":"ImageObject","url":"https://seo.marketexpert.cz/logo.png"}},"datePublished":"2026-03-04","dateModified":"2026-03-04"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://seo.marketexpert.cz/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://seo.marketexpert.cz/blog/"},{"@type":"ListItem","position":3,"name":"Как настроить Google Search Console","item":"https://seo.marketexpert.cz/blog/google-search-console-nastroyka/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Google Search Console бесплатный?","acceptedAnswer":{"@type":"Answer","text":"Да, это полностью бесплатный инструмент от Google без ограничений по отчётам или платных тарифов."}},{"@type":"Question","name":"Нужен ли Search Console для локального бизнеса с одним сайтом-визиткой?","acceptedAnswer":{"@type":"Answer","text":"Да, даже небольшой сайт-визитка получает пользу от понимания, по каким запросам он показывается и нет ли технических проблем с индексацией."}},{"@type":"Question","name":"Сколько ждать, пока появятся данные после подключения?","acceptedAnswer":{"@type":"Answer","text":"Первые данные об индексации появляются в течение нескольких дней, полноценная статистика по запросам — в течение 2–4 недель."}},{"@type":"Question","name":"Можно ли добавить несколько сайтов в один аккаунт Search Console?","acceptedAnswer":{"@type":"Answer","text":"Да, один аккаунт Google может управлять неограниченным числом ресурсов."}},{"@type":"Question","name":"Как Search Console связан с AI Overviews и другими ИИ-ответами?","acceptedAnswer":{"@type":"Answer","text":"Косвенно: данные Search Console показывают качество индексации и ранжирования в обычном поиске, что является базовым условием для попадания в AI Overviews."}}]}</script>
+</head>
+<body>
+
+<nav class="bnav" aria-label="Меню">
+  <a href="https://seo.marketexpert.cz/" class="bnav-logo">
+    <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+    <span class="bnav-name">M:E <em>agency</em></span>
+  </a>
+  <div class="bnav-links">
+    <a href="https://seo.marketexpert.cz/blog/">База знаний</a>
+    <a href="https://seo.marketexpert.cz/#pricing">Цены</a>
+  </div>
+</nav>
+
+<div class="wrap wrap--art">
+  <nav class="crumbs" aria-label="Хлебные крошки">
+    <a href="https://seo.marketexpert.cz/">Главная</a> / <a href="https://seo.marketexpert.cz/blog/">База знаний</a> / <span>Google Search Console</span>
+  </nav>
+
+  <article class="art">
+    <div class="art-tag">SEO · Техника</div>
+    <h1>Как настроить Google Search Console: пошагово для владельца сайта</h1>
+    <div class="art-meta">Опубликовано 4 марта 2026 · ~10 минут чтения</div>
+    <div class="art-tags">
+      <a href="/blog/?tag=search%20console" class="art-tag-link">search console</a>
+      <a href="/blog/?tag=%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20seo" class="art-tag-link">техническое seo</a>
+    </div>
+
+    <div class="lead-box">
+      <p>Google Search Console настраивается за 15–20 минут — нужно подтвердить право владения сайтом (через HTML-тег, DNS-запись или файл на сервере), отправить sitemap.xml и подождать несколько дней, пока появятся первые данные об индексации. В отличие от Google Analytics, который показывает поведение посетителей на сайте, Search Console показывает, как сайт видит сам Google — какие страницы проиндексированы, по каким запросам он показывается и есть ли технические ошибки, мешающие ранжированию.</p>
+    </div>
+
+    <h2>Зачем Search Console, если есть Google Analytics</h2>
+    <p>Google Analytics отвечает на вопрос «что делают посетители на сайте после того, как попали на него» — сколько времени провели, куда кликнули, что купили. Search Console отвечает на другой вопрос: «как Google видит сайт и почему он показывается (или не показывается) в выдаче по конкретным запросам».</p>
+    <p>Это два взаимодополняющих, а не конкурирующих инструмента. Без Search Console невозможно узнать, какие поисковые запросы реально приводят трафик на сайт, есть ли ошибки индексации, и как Google оценивает технические показатели вроде Core Web Vitals — Analytics этих данных не показывает вообще.</p>
+
+    <h2>Как подтвердить право на сайт</h2>
+    <p>Первый шаг — подтверждение того, что вы владеете сайтом. Google предлагает несколько способов, которые отличаются по удобству в зависимости от доступа, который у вас есть.</p>
+    <ol>
+      <li>Зайдите на search.google.com/search-console и нажмите «Добавить ресурс».</li>
+      <li>Выберите тип ресурса: «Домен» (охватывает все поддомены и протоколы сразу) или «Префикс URL» (только конкретный адрес, например https://site.cz).</li>
+      <li>Для варианта «Домен» подтвердите право владения через DNS-запись — добавьте TXT-запись, которую даёт Google, в настройках вашего домена у регистратора.</li>
+      <li>Для варианта «Префикс URL» выберите один из способов: загрузка HTML-файла на сервер, добавление HTML-тега в код страницы (в секцию head), или подтверждение через уже подключённый Google Analytics или Google Tag Manager.</li>
+      <li>Нажмите «Подтвердить» — Google проверит наличие записи или файла и активирует доступ к ресурсу.</li>
+    </ol>
+    <p>Для большинства бизнес-сайтов удобнее вариант «Домен» через DNS — он сразу охватывает www и без www версии, http и https, и все поддомены одной записью, без необходимости подтверждать каждый вариант адреса отдельно.</p>
+
+    <h2>Как отправить sitemap</h2>
+    <p>После подтверждения владения сайтом стоит явно указать Google, где искать список страниц для индексации.</p>
+    <ol>
+      <li>В левом меню Search Console откройте раздел «Файлы Sitemap».</li>
+      <li>Введите путь к файлу — обычно это sitemap.xml в корне сайта (например, https://site.cz/sitemap.xml).</li>
+      <li>Нажмите «Отправить» и проверьте статус через несколько минут — он должен смениться на «Успешно» с указанием количества найденных URL.</li>
+    </ol>
+    <p>Подробнее о том, как правильно составить sitemap.xml и связать его с robots.txt — в статье «<a href="/blog/sitemap-robots-canonical/">Sitemap, robots.txt и canonical: зачем нужны</a>».</p>
+
+    <h2>Отчёты: Pages, Performance, Core Web Vitals</h2>
+    <p>После подключения основные разделы, за которыми стоит следить регулярно:</p>
+    <table class="myth-table">
+      <thead>
+        <tr><th>Отчёт</th><th>Что показывает</th><th>Зачем нужен владельцу бизнеса</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pages (Страницы)</td><td>Какие страницы проиндексированы, какие исключены и почему</td><td>Проверка, что все ключевые страницы бизнеса видны Google</td></tr>
+        <tr><td>Performance (Эффективность)</td><td>Запросы, показы, клики и позиции по каждой странице</td><td>Понимание, по каким реальным фразам приходит трафик</td></tr>
+        <tr><td>Основные интернет-показатели (Core Web Vitals)</td><td>Скорость и стабильность загрузки страниц по оценке Google</td><td>Ранний сигнал технических проблем до падения позиций</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Типичные ошибки индексации и что с ними делать</h2>
+    <ul>
+      <li><strong>«Обнаружено, не проиндексировано».</strong> Google нашёл страницу, но пока не добавил в индекс — часто решается само со временем, если страница не имеет других проблем; при большом количестве таких страниц стоит проверить качество и уникальность контента.</li>
+      <li><strong>«Страница с перенаправлением».</strong> URL из sitemap ведёт на другой адрес через редирект — стоит обновить sitemap, указав в нём финальный адрес, а не тот, что ведёт на редирект.</li>
+      <li><strong>«Заблокировано файлом robots.txt».</strong> Страница, которую вы хотели индексировать, случайно закрыта в robots.txt — нужно проверить и скорректировать правила файла.</li>
+      <li><strong>«Дубликат, канонический URL не выбран пользователем».</strong> Google считает страницу дублем и сам выбирает основную версию — стоит явно проставить canonical-тег на нужную страницу, а не полагаться на автоматический выбор.</li>
+    </ul>
+
+    <h2>Как часто заходить владельцу бизнеса</h2>
+    <p>Для владельца бизнеса, который не занимается SEO ежедневно, достаточно заходить в Search Console раз в 2–4 недели: посмотреть, не появились ли новые ошибки индексации, проверить динамику показов и кликов по ключевым запросам, и убедиться, что новые страницы сайта попадают в индекс без задержек.</p>
+
+    <div class="cta-box">
+      <h3>Хотите, чтобы Search Console и базовую SEO-отчётность настроили за вас?</h3>
+      <p>Подключим и настроим Search Console правильно с первого раза, свяжем с Analytics и покажем, как читать отчёты без лишней терминологии.</p>
+      <div class="cta-row">
+        <a href="https://seo.marketexpert.cz/#order" class="btn-g">Оставить заявку</a>
+      </div>
+    </div>
+
+
+    <div class="lead-magnet">
+      <h3>Чек-лист: 10 типичных SEO-ошибок до аудита</h3>
+      <p>Скачайте бесплатный PDF с пунктами для самостоятельной проверки — отметьте, что уже проверили, и приходите к аудиту с готовым списком вопросов.</p>
+      <form class="lm-form" data-checklist action="https://formspree.io/f/mvznbblj" method="POST">
+        <input type="hidden" name="_subject" value="Чек-лист SEO-аудит — блог">
+        <input type="hidden" name="lead_type" value="checklist">
+        <input type="hidden" name="jazyk" value="RU">
+        <input type="text" name="_gotcha" class="lm-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="email" name="email" placeholder="Ваш email" required autocomplete="email">
+        <button type="submit">Получить чек-лист</button>
+      </form>
+      <div class="lm-success" hidden>
+        <p><strong>Готово!</strong> Чек-лист открыт в новой вкладке. Копию пришлём на ваш email.
+        Если файл не открылся — <a href="/files/checklist-seo-audit.pdf" target="_blank" rel="noopener noreferrer">откройте PDF ещё раз</a>.</p>
+      </div>
+      <div class="lm-note">PDF откроется сразу после отправки. Без спама — отписаться можно в любой момент.</div>
+    </div>
+
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details>
+        <summary>Google Search Console бесплатный?</summary>
+        <p>Да, это полностью бесплатный инструмент от Google без ограничений по числу отчётов или платных тарифов — единственное требование — подтверждённое право владения сайтом.</p>
+      </details>
+      <details>
+        <summary>Нужен ли Search Console для локального бизнеса с одним сайтом-визиткой?</summary>
+        <p>Да, размер сайта не влияет на полезность инструмента — даже небольшой сайт-визитка получает пользу от понимания, по каким запросам он показывается и нет ли технических проблем с индексацией.</p>
+      </details>
+      <details>
+        <summary>Сколько ждать, пока появятся данные после подключения?</summary>
+        <p>Первые данные об индексации обычно появляются в течение нескольких дней, а полноценная статистика по запросам и позициям (отчёт Performance) — в течение 2–4 недель, по мере накопления показов в выдаче.</p>
+      </details>
+      <details>
+        <summary>Можно ли добавить несколько сайтов в один аккаунт Search Console?</summary>
+        <p>Да, один аккаунт Google может управлять неограниченным числом ресурсов — это удобно, если у компании несколько доменов или языковых версий сайта.</p>
+      </details>
+      <details>
+        <summary>Как Search Console связан с AI Overviews и другими ИИ-ответами?</summary>
+        <p>Косвенно: данные Search Console показывают, насколько хорошо сайт индексируется и ранжируется в обычном поиске, а это базовое условие для попадания в AI Overviews, которые формируются на основе уже проиндексированной выдачи. Подробнее — в статье «<a href="/blog/seo-dlya-ai-poiska-geo/">Как оптимизировать сайт под ChatGPT, Perplexity и AI Overviews (GEO)?</a>».</p>
+      </details>
+    </div>
+
+    <div class="related">
+      <h2>Читайте также</h2>
+      <ul>
+        <li><a href="/blog/tehnicheskoe-seo-chto-eto/">Что такое техническое SEO</a> — общий технический слой, частью которого является Search Console.</li>
+        <li><a href="/blog/sitemap-robots-canonical/">Sitemap, robots.txt и canonical: зачем нужны</a> — как правильно составить sitemap перед отправкой в Search Console.</li>
+        <li><a href="/blog/kak-izmerit-rezultaty-seo/">Как измерить эффективность SEO</a> — какие метрики Search Console и Analytics отслеживать для оценки прогресса.</li>
+        <li><a href="/blog/seo-audit-chto-vhodit/">Что входит в SEO-аудит сайта</a> — как Search Console используется на аудите.</li>
+      </ul>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a href="https://marketexpert.cz/" class="site-footer__brand">
+      <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+      <span class="site-footer__brand-text">M:E <em>agency</em></span>
+    </a>
+    <div class="site-footer__middle">
+      <div class="site-footer__links" role="navigation" aria-label="Другие направления M:E">
+        <a href="https://seo.marketexpert.cz/">SEO</a>
+        <a href="https://ads.marketexpert.cz/">Google Ads</a>
+        <a href="https://consult.marketexpert.cz" target="_blank" rel="noopener noreferrer">Консультации</a>
+        <a href="https://reputation.marketexpert.cz" target="_blank" rel="noopener noreferrer">Репутация</a>
+      </div>
+      <div class="site-footer__cookie"><a href="https://marketexpert.cz/cookie-policy" target="_blank" rel="noopener noreferrer">Политика cookie</a></div>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:seo@marketexpert.cz">seo@marketexpert.cz</a>
+      <a href="tel:+420705995770">+420 705 995 770</a>
+    </div>
+  </div>
+  <div class="site-footer__copy-row">
+    <p class="site-footer__copy">© 2026 M:E Agency · Praha · SEO</p>
+    <p class="site-footer__crafted">
+      <a href="https://landing.marketexpert.cz/" target="_blank" rel="noopener noreferrer"><span class="site-footer__crafted-label">Created by</span><span class="site-footer__crafted-brand"><span class="site-footer__crafted-me">M:E</span> <em>agency</em></span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="/blog/blog.js?v=20260707g"></script>
+</body>
+</html>
