@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jak nastavit Google Search Console: krok za krokem pro majitele webu | M:E Agency</title>
+<meta name="description" content="Ověření webu, odeslání sitemap a klíčové reporty Search Console — nastavení za 15–20 minut pro majitele firmy.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/">
+<link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/">
+<link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/">
+<link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="M:E Agency">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/">
+<meta property="og:title" content="Jak nastavit Google Search Console: krok za krokem pro majitele webu">
+<meta property="og:description" content="Ověření webu, odeslání sitemap a klíčové reporty Search Console — nastavení za 15–20 minut.">
+<meta property="og:image" content="https://seo.marketexpert.cz/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jak nastavit Google Search Console | M:E Agency">
+<meta name="twitter:description" content="Ověření webu, sitemap a reporty Search Console — krok za krokem.">
+<meta name="twitter:image" content="https://seo.marketexpert.cz/logo.png">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/footer.css">
+<link rel="stylesheet" href="/blog/blog.css?v=20260708">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Jak nastavit Google Search Console: krok za krokem pro majitele webu","description":"Ověření webu, odeslání sitemap a klíčové reporty Search Console — nastavení za 15–20 minut pro majitele firmy.","inLanguage":"cs","mainEntityOfPage":"https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/","image":"https://seo.marketexpert.cz/logo.png","author":{"@type":"Organization","name":"M:E Agency"},"publisher":{"@type":"Organization","name":"M:E Agency","logo":{"@type":"ImageObject","url":"https://seo.marketexpert.cz/logo.png"}},"datePublished":"2026-03-04","dateModified":"2026-07-08"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://seo.marketexpert.cz/cs/"},{"@type":"ListItem","position":2,"name":"Znalostní báze","item":"https://seo.marketexpert.cz/cs/blog/"},{"@type":"ListItem","position":3,"name":"Jak nastavit Google Search Console","item":"https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Je Google Search Console zdarma?","acceptedAnswer":{"@type":"Answer","text":"Ano, je to zcela bezplatný nástroj od Google bez omezení počtu reportů nebo placených tarifů — jediným požadavkem je ověřené vlastnictví webu."}},{"@type":"Question","name":"Je Search Console potřeba i pro lokální firmu s jedním webem-vizitkou?","acceptedAnswer":{"@type":"Answer","text":"Ano, velikost webu nemá vliv na užitečnost nástroje — i malý web-vizitka získá přínos z pochopení, na jaké dotazy se zobrazuje a zda nemá technické problémy s indexací."}},{"@type":"Question","name":"Jak dlouho se čeká, než se objeví data po připojení?","acceptedAnswer":{"@type":"Answer","text":"První data o indexaci se obvykle objeví během několika dnů, zatímco plnohodnotná statistika o dotazech a pozicích (report Performance) během 2–4 týdnů, jak se hromadí zobrazení ve výsledcích vyhledávání."}},{"@type":"Question","name":"Dá se přidat více webů do jednoho účtu Search Console?","acceptedAnswer":{"@type":"Answer","text":"Ano, jeden účet Google může spravovat neomezený počet prostředků — to je výhodné, pokud firma má více domén nebo jazykových verzí webu."}},{"@type":"Question","name":"Jak souvisí Search Console s AI Overviews a dalšími AI odpověďmi?","acceptedAnswer":{"@type":"Answer","text":"Nepřímo: data ze Search Console ukazují, jak dobře je web indexovaný a řazený v běžném vyhledávání, a to je základní podmínka pro zařazení do AI Overviews, které vznikají na základě již indexovaných výsledků."}}]}</script>
+</head>
+<body>
+
+<nav class="bnav" aria-label="Menu">
+  <a href="https://seo.marketexpert.cz/cs/" class="bnav-logo">
+    <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+    <span class="bnav-name">M:E <em>agency</em></span>
+  </a>
+  <div class="bnav-links">
+    <a href="https://seo.marketexpert.cz/cs/blog/">Znalostní báze</a>
+    <a href="https://seo.marketexpert.cz/cs/#pricing">Ceník</a>
+    <a href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/" hreflang="ru">RU</a>
+  </div>
+</nav>
+
+<div class="wrap wrap--art">
+  <nav class="crumbs" aria-label="Drobečková navigace">
+    <a href="https://seo.marketexpert.cz/cs/">Úvod</a> / <a href="https://seo.marketexpert.cz/cs/blog/">Znalostní báze</a> / <span>Jak nastavit Google Search Console</span>
+  </nav>
+
+  <article class="art">
+    <div class="art-tag">SEO · Technika</div>
+    <h1>Jak nastavit Google Search Console: krok za krokem pro majitele webu</h1>
+    <div class="art-meta">Publikováno 4. 3. 2026 · ~10 minut čtení</div>
+    <div class="art-tags">
+      <a href="/cs/blog/?tag=search%20console" class="art-tag-link">search console</a>
+      <a href="/cs/blog/?tag=technick%C3%A9%20seo" class="art-tag-link">technické seo</a>
+    </div>
+
+    <div class="lead-box">
+      Google Search Console se nastaví za 15–20 minut — je třeba potvrdit vlastnictví webu (přes HTML tag, DNS záznam nebo soubor na serveru), odeslat sitemap.xml a počkat několik dní, než se objeví první data o indexaci. Na rozdíl od Google Analytics, který ukazuje chování návštěvníků na webu, Search Console ukazuje, jak web vidí sám Google — které stránky jsou indexované, na jaké dotazy se zobrazuje a zda existují technické chyby bránící řazení.
+    </div>
+
+    <h2>Proč Search Console, když existuje Google Analytics</h2>
+    <p>
+      Google Analytics odpovídá na otázku „co dělají návštěvníci na webu poté, co se na něj dostanou" — kolik času strávili, na co klikli, co koupili. Search Console odpovídá na jinou otázku: „jak Google vidí web a proč se zobrazuje (nebo nezobrazuje) ve výsledcích na konkrétní dotazy".
+    </p>
+    <p>
+      Jde o dva vzájemně se doplňující, ne konkurenční nástroje. Bez Search Console nelze zjistit, jaké vyhledávací dotazy skutečně přivádějí návštěvnost na web, zda existují chyby indexace, a jak Google hodnotí technické ukazatele jako Core Web Vitals — tato data Analytics vůbec neukazuje.
+    </p>
+
+    <h2>Jak potvrdit vlastnictví webu</h2>
+    <p>Prvním krokem je potvrzení, že jste vlastníkem webu. Google nabízí několik způsobů, které se liší v pohodlnosti podle přístupu, který máte k dispozici.</p>
+    <ol>
+      <li>Přejděte na <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">search.google.com/search-console</a> a klikněte na „Přidat prostředek".</li>
+      <li>Zvolte typ prostředku: „Doména" (pokrývá všechny subdomény a protokoly najednou) nebo „Prefix URL" (pouze konkrétní adresa, například https://site.cz).</li>
+      <li>U varianty „Doména" potvrďte vlastnictví přes DNS záznam — přidejte TXT záznam, který vám Google poskytne, do nastavení vaší domény u registrátora.</li>
+      <li>U varianty „Prefix URL" zvolte jeden ze způsobů: nahrání HTML souboru na server, přidání HTML tagu do kódu stránky (do sekce head), nebo potvrzení přes již propojený Google Analytics či Google Tag Manager.</li>
+      <li>Klikněte na „Ověřit" — Google zkontroluje přítomnost záznamu nebo souboru a aktivuje přístup k prostředku.</li>
+    </ol>
+    <p>
+      Pro většinu firemních webů je pohodlnější varianta „Doména" přes DNS — pokrývá najednou verze s www i bez www, http i https a všechny subdomény jedním záznamem, bez nutnosti ověřovat každou variantu adresy zvlášť.
+    </p>
+
+    <h2>Jak odeslat sitemap</h2>
+    <p>Po potvrzení vlastnictví webu je vhodné Googlu jasně sdělit, kde má hledat seznam stránek k indexaci.</p>
+    <ol>
+      <li>V levém menu Search Console otevřete sekci „Soubory Sitemap".</li>
+      <li>Zadejte cestu k souboru — obvykle jde o sitemap.xml v kořeni webu (například https://site.cz/sitemap.xml).</li>
+      <li>Klikněte na „Odeslat" a po několika minutách zkontrolujte stav — měl by se změnit na „Úspěšné" s uvedením počtu nalezených URL.</li>
+    </ol>
+    <p>
+      Více o tom, jak správně sestavit sitemap.xml a propojit ho s robots.txt — v článku
+      „<a href="/cs/blog/sitemap-robots-canonical/">Sitemap, robots.txt a canonical: k čemu slouží</a>".
+    </p>
+
+    <h2>Reporty: Pages, Performance, Core Web Vitals</h2>
+    <p>Po připojení jsou hlavní sekce, které stojí za to pravidelně sledovat:</p>
+    <table class="myth-table">
+      <thead>
+        <tr><th>Report</th><th>Co ukazuje</th><th>Proč je potřebný pro majitele firmy</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pages (Stránky)</td><td>Které stránky jsou indexované, které vyloučené a proč</td><td>Kontrola, že všechny klíčové stránky firmy jsou pro Google viditelné</td></tr>
+        <tr><td>Performance (Výkon)</td><td>Dotazy, zobrazení, kliky a pozice pro každou stránku</td><td>Pochopení, na jaké skutečné fráze přichází návštěvnost</td></tr>
+        <tr><td>Základní webové signály (Core Web Vitals)</td><td>Rychlost a stabilita načítání stránek podle hodnocení Google</td><td>Včasný signál technických problémů dřív, než klesnou pozice</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Typické chyby indexace a co s nimi dělat</h2>
+    <ul>
+      <li><strong>„Zjištěno, neindexováno".</strong> Google stránku našel, ale zatím ji nepřidal do indexu — často se vyřeší samo časem, pokud stránka nemá jiné problémy; při velkém množství takových stránek stojí za to zkontrolovat kvalitu a jedinečnost obsahu.</li>
+      <li><strong>„Stránka s přesměrováním".</strong> URL ze sitemapy vede na jinou adresu přes redirect — je vhodné aktualizovat sitemap a uvést v něm finální adresu, ne tu, která vede na přesměrování.</li>
+      <li><strong>„Blokováno souborem robots.txt".</strong> Stránka, kterou jste chtěli indexovat, je náhodou zablokovaná v robots.txt — je třeba zkontrolovat a upravit pravidla souboru.</li>
+      <li><strong>„Duplicita, kanonickou URL nevybral uživatel".</strong> Google považuje stránku za duplicitu a sám vybírá hlavní verzi — je vhodné explicitně nastavit canonical tag na požadovanou stránku, místo spoléhání na automatický výběr.</li>
+    </ul>
+
+    <h2>Jak často by měl majitel firmy Search Console kontrolovat</h2>
+    <p>
+      Pro majitele firmy, který se SEO nezabývá denně, stačí zajít do Search Console jednou za 2–4 týdny: podívat se, zda se neobjevily nové chyby indexace, zkontrolovat vývoj zobrazení a kliků u klíčových dotazů, a ujistit se, že nové stránky webu se dostávají do indexu bez zpoždění.
+    </p>
+
+    <div class="cta-box">
+      <h3>Chcete, abychom vám Search Console a základní SEO reporting nastavili za vás?</h3>
+      <p>Připojíme a nastavíme Search Console správně napoprvé, propojíme s Analytics a ukážeme, jak číst reporty bez zbytečné terminologie.</p>
+      <div class="cta-row">
+        <a href="https://seo.marketexpert.cz/cs/#order" class="btn-g">Nechat si zpracovat poptávku</a>
+      </div>
+    </div>
+
+    <div class="lead-magnet">
+      <h3>Checklist: 10 typických SEO chyb před auditem</h3>
+      <p>Stáhněte si bezplatný PDF s body pro samostatnou kontrolu — zaškrtněte, co jste už zkontrolovali, a přijďte na audit s hotovým seznamem otázek.</p>
+      <form class="lm-form" data-checklist action="https://formspree.io/f/mwvjnnyg" method="POST">
+        <input type="hidden" name="_subject" value="Checklist SEO audit — blog CZ">
+        <input type="hidden" name="lead_type" value="checklist">
+        <input type="hidden" name="jazyk" value="CS">
+        <input type="text" name="_gotcha" class="lm-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="email" name="email" placeholder="Váš e-mail" required autocomplete="email">
+        <button type="submit">Získat checklist</button>
+      </form>
+      <div class="lm-success" hidden>
+        <p><strong>Hotovo!</strong> Checklist se otevřel v nové záložce. Kopii pošleme na váš email.
+        Pokud se soubor neotevřel — <a href="/files/checklist-seo-audit-cs.pdf" target="_blank" rel="noopener noreferrer">otevřete PDF znovu</a>.</p>
+      </div>
+      <div class="lm-note">PDF se otevře ihned po odeslání. Žádný spam — odhlásit se můžete kdykoli.</div>
+    </div>
+
+    <h2>Časté otázky</h2>
+    <div class="faq">
+      <details>
+        <summary>Je Google Search Console zdarma?</summary>
+        <p>Ano, je to zcela bezplatný nástroj od Google bez omezení počtu reportů nebo placených tarifů — jediným požadavkem je ověřené vlastnictví webu.</p>
+      </details>
+      <details>
+        <summary>Je Search Console potřeba i pro lokální firmu s jedním webem-vizitkou?</summary>
+        <p>Ano, velikost webu nemá vliv na užitečnost nástroje — i malý web-vizitka získá přínos z pochopení, na jaké dotazy se zobrazuje a zda nemá technické problémy s indexací.</p>
+      </details>
+      <details>
+        <summary>Jak dlouho se čeká, než se objeví data po připojení?</summary>
+        <p>První data o indexaci se obvykle objeví během několika dnů, zatímco plnohodnotná statistika o dotazech a pozicích (report Performance) během 2–4 týdnů, jak se hromadí zobrazení ve výsledcích vyhledávání.</p>
+      </details>
+      <details>
+        <summary>Dá se přidat více webů do jednoho účtu Search Console?</summary>
+        <p>Ano, jeden účet Google může spravovat neomezený počet prostředků — to je výhodné, pokud firma má více domén nebo jazykových verzí webu.</p>
+      </details>
+      <details>
+        <summary>Jak souvisí Search Console s AI Overviews a dalšími AI odpověďmi?</summary>
+        <p>Nepřímo: data ze Search Console ukazují, jak dobře je web indexovaný a řazený v běžném vyhledávání, a to je základní podmínka pro zařazení do AI Overviews, které vznikají na základě již indexovaných výsledků. Podrobněji — v článku „<a href="/cs/blog/seo-pro-ai-vyhledavani-geo/">Jak optimalizovat web pro ChatGPT, Perplexity a AI Overviews (GEO)?</a>".</p>
+      </details>
+    </div>
+
+    <div class="related">
+      <h2>Čtěte také</h2>
+      <ul>
+        <li><a href="/cs/blog/technicke-seo-co-to-je/">Co je technické SEO</a> — jak Search Console zapadá do technického základu.</li>
+        <li><a href="/cs/blog/sitemap-robots-canonical/">Sitemap, robots.txt a canonical</a> — co odeslat do Search Console a proč.</li>
+        <li><a href="/cs/blog/core-web-vitals-seo/">Core Web Vitals a SEO</a> — jak číst report rychlosti v Search Console.</li>
+        <li><a href="/cs/blog/seo-audit-co-zahrnuje/">Co zahrnuje SEO audit webu</a> — co děláme s daty z Search Console při auditu.</li>
+        <li><a href="/cs/blog/co-je-seo/">Co je SEO jednoduše řečeno</a> — základ před nastavením nástrojů.</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h3>Potřebujete pomoc s nastavením Search Console?</h3>
+      <p>Zanechte nezávaznou poptávku — připojíme nástroje a ukážeme, jak číst reporty bez zbytečné terminologie.</p>
+      <div class="cta-row">
+        <a href="https://seo.marketexpert.cz/cs/#order" class="btn-g">Bezplatná konzultace</a>
+        <a href="https://seo.marketexpert.cz/cs/#pricing" class="btn-o">Ceník SEO</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a href="https://marketexpert.cz/" class="site-footer__brand">
+      <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+      <span class="site-footer__brand-text">M:E <em>agency</em></span>
+    </a>
+    <div class="site-footer__middle">
+      <div class="site-footer__links" role="navigation" aria-label="Další služby M:E">
+        <a href="https://ads.marketexpert.cz/cz/">Google Ads</a>
+        <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">Konzultace</a>
+        <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Landingy</a>
+        <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Reputace</a>
+      </div>
+      <div class="site-footer__cookie"><a href="https://marketexpert.cz/cookie-policy" target="_blank" rel="noopener noreferrer">Zásady cookies</a></div>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:seo@marketexpert.cz">seo@marketexpert.cz</a>
+      <a href="tel:+420705995770">+420 705 995 770</a>
+    </div>
+  </div>
+  <div class="site-footer__copy-row">
+    <p class="site-footer__copy">© 2026 M:E Agency · Praha · SEO</p>
+    <p class="site-footer__crafted">
+      <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer"><span class="site-footer__crafted-label">Created by</span><span class="site-footer__crafted-brand"><span class="site-footer__crafted-me">M:E</span> <em>agency</em></span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="/cs/blog/blog.js?v=20260708"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core Web Vitals a SEO: LCP, INP, CLS — co opravit jako první | M:E Agency</title>
+<meta name="description" content="LCP, INP a CLS jednoduchými slovy — jak rychlost a UX ovlivňují organiku a co zkontrolovat na vlastním webu.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/">
+<link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/">
+<link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/core-web-vitals-seo/">
+<link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="M:E Agency">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/">
+<meta property="og:title" content="Core Web Vitals a SEO: LCP, INP, CLS — co opravit jako první">
+<meta property="og:description" content="LCP, INP a CLS jednoduchými slovy — jak rychlost a UX ovlivňují organiku.">
+<meta property="og:image" content="https://seo.marketexpert.cz/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Core Web Vitals a SEO | M:E Agency">
+<meta name="twitter:description" content="LCP, INP, CLS — co měří Core Web Vitals a co opravit jako první.">
+<meta name="twitter:image" content="https://seo.marketexpert.cz/logo.png">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/footer.css">
+<link rel="stylesheet" href="/blog/blog.css?v=20260708">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Core Web Vitals a SEO: LCP, INP, CLS — co opravit jako první","description":"LCP, INP a CLS jednoduchými slovy — jak rychlost a UX ovlivňují organiku a co zkontrolovat na vlastním webu.","inLanguage":"cs","mainEntityOfPage":"https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/","image":"https://seo.marketexpert.cz/logo.png","author":{"@type":"Organization","name":"M:E Agency"},"publisher":{"@type":"Organization","name":"M:E Agency","logo":{"@type":"ImageObject","url":"https://seo.marketexpert.cz/logo.png"}},"datePublished":"2026-04-22","dateModified":"2026-07-08"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://seo.marketexpert.cz/cs/"},{"@type":"ListItem","position":2,"name":"Znalostní báze","item":"https://seo.marketexpert.cz/cs/blog/"},{"@type":"ListItem","position":3,"name":"Core Web Vitals a SEO","item":"https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Jsou Core Web Vitals oficiální ranking faktor Google?","acceptedAnswer":{"@type":"Answer","text":"Ano, Google oficiálně potvrzuje, že Core Web Vitals patří mezi ranking signály v rámci systému Page Experience, ale nejde o jediný ani nejvýznamnější faktor."}},{"@type":"Question","name":"Dá se Core Web Vitals na menším webu ignorovat?","acceptedAnswer":{"@type":"Answer","text":"Úplně ignorovat se nevyplácí, zejména pokud konkurence ve výsledcích vykazuje u těchto metrik dobré výsledky."}},{"@type":"Question","name":"Jak Core Web Vitals souvisí s mobilní verzí webu?","acceptedAnswer":{"@type":"Answer","text":"Google hodnotí Core Web Vitals v první řadě podle mobilní verze webu v rámci mobile-first indexace."}},{"@type":"Question","name":"Ovlivňují CDN a výběr hostingu v Česku tyto metriky?","acceptedAnswer":{"@type":"Answer","text":"Ano, doba odezvy serveru přímo ovlivňuje LCP, a CDN pomáhá zrychlit doručování statických souborů uživatelům v různých regionech."}},{"@type":"Question","name":"Jak dlouho trvá oprava Core Web Vitals?","acceptedAnswer":{"@type":"Answer","text":"Bodové úpravy mohou zabrat od několika hodin do několika dní. Hlubší problémy mohou zabrat několik týdnů v závislosti na složitosti platformy webu."}}]}</script>
+</head>
+<body>
+
+<nav class="bnav" aria-label="Menu">
+  <a href="https://seo.marketexpert.cz/cs/" class="bnav-logo">
+    <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+    <span class="bnav-name">M:E <em>agency</em></span>
+  </a>
+  <div class="bnav-links">
+    <a href="https://seo.marketexpert.cz/cs/blog/">Znalostní báze</a>
+    <a href="https://seo.marketexpert.cz/cs/#pricing">Ceník</a>
+    <a href="https://seo.marketexpert.cz/blog/core-web-vitals-seo/" hreflang="ru">RU</a>
+  </div>
+</nav>
+
+<div class="wrap wrap--art">
+  <nav class="crumbs" aria-label="Drobečková navigace">
+    <a href="https://seo.marketexpert.cz/cs/">Úvod</a> / <a href="https://seo.marketexpert.cz/cs/blog/">Znalostní báze</a> / <span>Core Web Vitals a SEO</span>
+  </nav>
+
+  <article class="art">
+    <div class="art-tag">SEO · Technika</div>
+    <h1>Core Web Vitals a SEO: LCP, INP, CLS — co opravit jako první</h1>
+    <div class="art-meta">Publikováno 22. 4. 2026 · ~10 minut čtení</div>
+    <div class="art-tags">
+      <a href="/cs/blog/?tag=technick%C3%A9%20seo" class="art-tag-link">technické seo</a>
+      <a href="/cs/blog/?tag=optimalizace" class="art-tag-link">optimalizace</a>
+    </div>
+
+    <div class="lead-box">
+      Core Web Vitals jsou tři metriky Google (LCP, INP, CLS), které hodnotí rychlost načítání, odezvu při interakci a vizuální stabilitu stránky. Patří mezi ranking faktory, ale ne mezi ty nejvýznamnější — špatné hodnoty zřídka „potopí" web úplně, ale za jinak stejných podmínek má stránka s dobrými Core Web Vitals výhodu oproti konkurenci se špatnými. Pro většinu webů služeb přináší největší praktický efekt oprava LCP — nejvíc viditelné metriky pro uživatele.
+    </div>
+
+    <h2>Co jsou Core Web Vitals a jak souvisí se SEO</h2>
+    <p>
+      Core Web Vitals je sada tří metrik, které Google používá k hodnocení uživatelského zážitku z načítání a interakce se stránkou: Largest Contentful Paint (LCP), Interaction to Next Paint (INP) a Cumulative Layout Shift (CLS). Data se sbírají od skutečných uživatelů přes Chrome (zdroj se nazývá CrUX — Chrome User Experience Report), ne jen ze syntetických testů.
+    </p>
+    <p>
+      Pro SEO je to jeden z ranking faktorů v celkovém systému hodnocení stránky — vedle relevance obsahu, ne místo ní. Špatné hodnoty Core Web Vitals nevedou k automatickému vyloučení z výsledků vyhledávání, ale za jinak stejných podmínek (stejně relevantní obsah, podobná autorita webu) dá Google spíš přednost rychlejší a stabilnější stránce.
+    </p>
+
+    <h2>LCP — co zpomaluje a jak zrychlit</h2>
+    <p>
+      LCP (Largest Contentful Paint) měří čas, za který se načte největší viditelný prvek na obrazovce — obvykle je to hlavní obrázek, video nebo velký blok textu na začátku stránky.
+    </p>
+    <p>Typické příčiny pomalého LCP:</p>
+    <ul>
+      <li>Příliš těžké obrázky bez komprese a bez moderních formátů (WebP, AVIF).</li>
+      <li>Pomalá odezva serveru (Time to First Byte) — web na slabém hostingu dlouho začíná odesílat i první bajt dat.</li>
+      <li>Skripty a styly blokující rendering, které se načítají dřív než hlavní obsah.</li>
+    </ul>
+    <p>
+      Praktické kroky: zkomprimovat a správně naformátovat obrázky, zapnout cachování a případně připojit CDN, odložit načítání nekritických skriptů až po zobrazení hlavního obsahu.
+    </p>
+
+    <h2>INP (místo FID) — interaktivita</h2>
+    <p>
+      INP (Interaction to Next Paint) nahradil dřívější metriku FID a měří, jak rychle stránka reaguje na akce uživatele — kliknutí, stisknutí, zadávání textu — po celou dobu interakce se stránkou, ne jen při prvním kliknutí.
+    </p>
+    <p>
+      Pomalé INP nejčastěji souvisí s nadměrným množstvím JavaScriptu, který běží v hlavním vlákně prohlížeče a blokuje jeho reakci na akce uživatele. Odlehčení hlavního vlákna — rozdělení velkých skriptů na části, odložené načítání vedlejších funkcí — obvykle přináší největší efekt pro zlepšení této metriky.
+    </p>
+
+    <h2>CLS — posuny rozvržení</h2>
+    <p>
+      CLS (Cumulative Layout Shift) měří, jak silně prvky stránky „poskakují" během načítání — například když se text náhle posune dolů kvůli dodatečně načtenému obrázku nebo reklamnímu bloku bez předem vyhrazeného místa.
+    </p>
+    <p>
+      Časté příčiny: obrázky a videa bez explicitně uvedených rozměrů v kódu, dynamicky načítané bannery nebo widgety bez vyhrazeného prostoru, fonty způsobující posun textu při načítání. Řešení je ve většině případů technické: explicitně zadat rozměry pro obrázky, vkládané prvky a předem vyhradit místo pro dynamický obsah.
+    </p>
+
+    <h2>Co opravit jako první na typickém webu služeb</h2>
+    <table class="myth-table">
+      <thead>
+        <tr><th>Metrika</th><th>Orientační hodnoty Google (dobré / špatné)</th><th>Typická příčina</th><th>Kdo opravuje</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>LCP</td><td>≤ 2,5 s — dobré; &gt; 4 s — špatné</td><td>Těžké obrázky, pomalý server</td><td>Vývojář / poskytovatel hostingu</td></tr>
+        <tr><td>INP</td><td>≤ 200 ms — dobré; &gt; 500 ms — špatné</td><td>Nadměrný JavaScript v hlavním vlákně</td><td>Vývojář</td></tr>
+        <tr><td>CLS</td><td>≤ 0,1 — dobré; &gt; 0,25 — špatné</td><td>Obrázky a bannery bez vyhrazených rozměrů</td><td>Vývojář / kodér</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Pro typický web služeb je rozumné pořadí priorit: nejdřív LCP (nejvíc viditelný pro uživatele a nejčastěji nejsnáze vylepšitelný optimalizací obrázků a hostingu), poté CLS (obvykle se řeší cílenými úpravami vzhledu), a nakonec INP, pokud web nemá náročné interaktivní prvky jako složité filtry nebo kalkulačky.
+    </p>
+
+    <h2>Jak měřit</h2>
+    <ul>
+      <li><strong>PageSpeed Insights.</strong> Bezplatný nástroj Google, který ukazuje jak laboratorní (syntetická) data, tak reálná data CrUX, pokud má web dostatek návštěvnosti pro jejich nahromáždění.</li>
+      <li><strong>Google Search Console.</strong> Sekce „Základní webové signály" ukazuje data pro všechny stránky webu najednou, seskupené podle stavu (dobré, vyžaduje zlepšení, špatné).</li>
+      <li><strong>CrUX (Chrome User Experience Report).</strong> Zdroj skutečných uživatelských dat, na jehož základě vznikají reporty v Search Console a PageSpeed Insights — dostupný i přímo přes samostatný dashboard pro podrobnější analýzu.</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Chcete zjistit, co přesně zpomaluje váš web?</h3>
+      <p>Provedeme technický audit se zaměřením na Core Web Vitals: najdeme konkrétní příčiny pomalého LCP, INP a CLS a dáme prioritní plán oprav pro vývojáře.</p>
+      <div class="cta-row">
+        <a href="https://seo.marketexpert.cz/cs/#order" class="btn-g">Objednat SEO audit</a>
+      </div>
+    </div>
+
+    <div class="lead-magnet">
+      <h3>Checklist: 10 typických SEO chyb před auditem</h3>
+      <p>Stáhněte si bezplatný PDF s body pro samostatnou kontrolu — zaškrtněte, co jste už zkontrolovali, a přijďte na audit s hotovým seznamem otázek.</p>
+      <form class="lm-form" data-checklist action="https://formspree.io/f/mwvjnnyg" method="POST">
+        <input type="hidden" name="_subject" value="Checklist SEO audit — blog CZ">
+        <input type="hidden" name="lead_type" value="checklist">
+        <input type="hidden" name="jazyk" value="CS">
+        <input type="text" name="_gotcha" class="lm-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="email" name="email" placeholder="Váš e-mail" required autocomplete="email">
+        <button type="submit">Získat checklist</button>
+      </form>
+      <div class="lm-success" hidden>
+        <p><strong>Hotovo!</strong> Checklist se otevřel v nové záložce. Kopii pošleme na váš email.
+        Pokud se soubor neotevřel — <a href="/files/checklist-seo-audit-cs.pdf" target="_blank" rel="noopener noreferrer">otevřete PDF znovu</a>.</p>
+      </div>
+      <div class="lm-note">PDF se otevře ihned po odeslání. Žádný spam — odhlásit se můžete kdykoli.</div>
+    </div>
+
+    <h2>Časté otázky</h2>
+    <div class="faq">
+      <details>
+        <summary>Jsou Core Web Vitals oficiální ranking faktor Google?</summary>
+        <p>Ano, Google oficiálně potvrzuje, že Core Web Vitals patří mezi ranking signály v rámci širšího systému hodnocení stránky, známého jako Page Experience. Přitom nejde o jediný ani nejvýznamnější faktor — relevance a kvalita obsahu i nadále hrají velkou roli.</p>
+      </details>
+      <details>
+        <summary>Dá se Core Web Vitals na menším webu ignorovat?</summary>
+        <p>Úplně ignorovat se nevyplácí, zejména pokud konkurence ve výsledcích vykazuje u těchto metrik dobré výsledky — v takovém případě se rozdíl v rychlosti může stát znatelnou výhodou. U velmi malého webu s nízkou konkurencí v oboru může být efekt zlepšení CWV méně výrazný než na konkurenčních trzích.</p>
+      </details>
+      <details>
+        <summary>Jak Core Web Vitals souvisí s mobilní verzí webu?</summary>
+        <p>Přímo: Google hodnotí Core Web Vitals v první řadě podle mobilní verze webu, v rámci mobile-first indexace. Pomalý mobilní web dostává horší hodnocení, i když desktopová verze funguje rychle.</p>
+      </details>
+      <details>
+        <summary>Ovlivňují CDN a výběr hostingu v Česku tyto metriky?</summary>
+        <p>Ano, doba odezvy serveru (ovlivňující LCP) přímo závisí na kvalitě hostingu a geografické blízkosti serveru k hlavnímu publiku webu. Připojení CDN pomáhá zrychlit doručování statických souborů (obrázků, skriptů, stylů) uživatelům v různých regionech.</p>
+      </details>
+      <details>
+        <summary>Jak dlouho trvá oprava Core Web Vitals?</summary>
+        <p>Bodové úpravy (komprese obrázků, zadání rozměrů pro média) mohou zabrat od několika hodin do několika dní práce vývojáře. Hlubší problémy — těžký JavaScript vyžadující refaktoring, nebo výměna hostingu — mohou zabrat několik týdnů, v závislosti na složitosti technické platformy webu.</p>
+      </details>
+    </div>
+
+    <div class="related">
+      <h2>Čtěte také</h2>
+      <ul>
+        <li><a href="/cs/blog/technicke-seo-co-to-je/">Co je technické SEO</a> — obecný technický základ, jehož součástí jsou Core Web Vitals.</li>
+        <li><a href="/cs/blog/seo-po-redesignu/">Web prošel redesignem — pozice klesly</a> — jak redesign často zhorší právě tyto metriky.</li>
+        <li><a href="/cs/blog/nastaveni-google-search-console/">Jak nastavit Google Search Console</a> — kde sledovat report Základní webové signály.</li>
+        <li><a href="/cs/blog/jak-merit-vysledky-seo/">Jak měřit efektivitu SEO</a> — jak CWV zapadají do celkového reportingu.</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h3>Potřebujete audit Core Web Vitals?</h3>
+      <p>Zanechte nezávaznou poptávku — najdeme příčiny pomalého LCP, INP a CLS a dáme prioritní plán oprav.</p>
+      <div class="cta-row">
+        <a href="https://seo.marketexpert.cz/cs/#order" class="btn-g">Bezplatná konzultace</a>
+        <a href="https://seo.marketexpert.cz/cs/#pricing" class="btn-o">Ceník SEO</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a href="https://marketexpert.cz/" class="site-footer__brand">
+      <img src="/logo.png" alt="M:E agency" decoding="async" onerror="this.onerror=null;this.src='/logo.svg'">
+      <span class="site-footer__brand-text">M:E <em>agency</em></span>
+    </a>
+    <div class="site-footer__middle">
+      <div class="site-footer__links" role="navigation" aria-label="Další služby M:E">
+        <a href="https://ads.marketexpert.cz/cz/">Google Ads</a>
+        <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">Konzultace</a>
+        <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Landingy</a>
+        <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Reputace</a>
+      </div>
+      <div class="site-footer__cookie"><a href="https://marketexpert.cz/cookie-policy" target="_blank" rel="noopener noreferrer">Zásady cookies</a></div>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:seo@marketexpert.cz">seo@marketexpert.cz</a>
+      <a href="tel:+420705995770">+420 705 995 770</a>
+    </div>
+  </div>
+  <div class="site-footer__copy-row">
+    <p class="site-footer__copy">© 2026 M:E Agency · Praha · SEO</p>
+    <p class="site-footer__crafted">
+      <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer"><span class="site-footer__crafted-label">Created by</span><span class="site-footer__crafted-brand"><span class="site-footer__crafted-me">M:E</span> <em>agency</em></span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="/cs/blog/blog.js?v=20260708"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "co-je-seo",
+    "ruSlug": "chto-takoe-seo",
+    "title": "Co je SEO jednoduše řečeno",
+    "excerpt": "Jak funguje vyhledávací optimalizace, čím se liší od reklamy, komu se hodí a kde začít — bez mýtů o „top 1 za měsíc“.",
+    "category": "SEO · Základy",
+    "date": "2026-02-04",
+    "tags": ["technické seo", "obsah", "spuštění"]
+  },
+  {
+    "slug": "seo-nebo-google-ads",
+    "ruSlug": "seo-vs-google-ads",
+    "title": "SEO nebo Google Ads: co zvolit v roce 2026?",
+    "excerpt": "SEO přináší levnější návštěvnost, ale až po měsících; Google Ads hned, ale platíte za každý klik. Co zvolit podle rozpočtu a termínů.",
+    "category": "SEO · Rozpočet",
+    "date": "2026-02-11",
+    "tags": ["rozpočet", "optimalizace", "spuštění"]
+  },
+  {
+    "slug": "kolik-stoji-seo-v-cesku",
+    "ruSlug": "skolko-stoit-seo-v-chehii",
+    "title": "Kolik stojí SEO v Česku: audit a vedení v roce 2026",
+    "excerpt": "Z čeho se skládá cena SEO v Praze: audit od 100 €, správa od 350 €/měs. a co reálně ovlivňuje nabídku.",
+    "category": "SEO · Rozpočet",
+    "date": "2026-03-25",
+    "tags": ["rozpočet", "audit"]
+  },
+  {
+    "slug": "seo-audit-co-zahrnuje",
+    "ruSlug": "seo-audit-chto-vhodit",
+    "title": "Co zahrnuje SEO audit webu: checklist pro majitele firmy",
+    "excerpt": "Co se na SEO auditu skutečně kontroluje — technika, obsah, konkurence, lokální SEO — a jak vypadá report s prioritami místo seznamu problémů.",
+    "category": "SEO · Audit",
+    "date": "2026-02-18",
+    "tags": ["audit", "technické seo"]
+  },
+  {
+    "slug": "technicke-seo-co-to-je",
+    "ruSlug": "tehnicheskoe-seo-chto-eto",
+    "title": "Co je technické SEO: checklist pro web v roce 2026",
+    "excerpt": "Technické SEO je základ, bez kterého obsah nefunguje: indexace, rychlost, mobile, duplicity a minimální schema.org pro firmu.",
+    "category": "SEO · Technika",
+    "date": "2026-02-25",
+    "tags": ["technické seo", "search console"]
+  },
+  {
+    "slug": "seo-pro-ai-vyhledavani-geo",
+    "ruSlug": "seo-dlya-ai-poiska-geo",
+    "title": "Jak optimalizovat web pro ChatGPT, Perplexity a AI Overviews (GEO)?",
+    "excerpt": "GEO je optimalizace pro citování v ChatGPT, Perplexity a AI Overviews. Co přidat na web, aby AI pochopilo značku a začalo vás citovat.",
+    "category": "SEO · GEO",
+    "date": "2026-03-18",
+    "tags": ["AI vyhledávání", "technické seo", "obsah"]
+  },
+  {
+    "slug": "nastaveni-google-search-console",
+    "ruSlug": "google-search-console-nastroyka",
+    "title": "Jak nastavit Google Search Console: krok za krokem pro majitele webu",
+    "excerpt": "Nastavení Google Search Console: ověření webu, odeslání sitemap a klíčové reporty — bez zbytečné terminologie.",
+    "category": "SEO · Technika",
+    "date": "2026-03-04",
+    "tags": ["search console", "technické seo"]
+  },
+  {
+    "slug": "sitemap-robots-canonical",
+    "ruSlug": "sitemap-robots-canonical",
+    "title": "Sitemap, robots.txt a canonical: k čemu slouží a jak neuškodit SEO",
+    "excerpt": "Sitemap, robots.txt a canonical — tři soubory, které řídí indexaci webu. Jak mezi nimi nevytvořit rozpor a nepoškodit SEO.",
+    "category": "SEO · Technika",
+    "date": "2026-04-01",
+    "tags": ["technické seo", "optimalizace"]
+  },
+  {
+    "slug": "core-web-vitals-seo",
+    "ruSlug": "core-web-vitals-seo",
+    "title": "Core Web Vitals a SEO: LCP, INP, CLS — co opravit jako první",
+    "excerpt": "LCP, INP a CLS jednoduchými slovy: co měří Core Web Vitals, orientační hodnoty Google a co opravit první na typickém webu služeb.",
+    "category": "SEO · Technika",
+    "date": "2026-04-22",
+    "tags": ["technické seo", "optimalizace"]
+  },
+  {
+    "slug": "seo-po-redesignu",
+    "ruSlug": "seo-posle-redizaina",
+    "title": "Web prošel redesignem — pozice klesly: co dělat s SEO",
+    "excerpt": "Pozice klesly po redesignu nebo změně CMS? Příčiny — redirecty, 404, ztráta obsahu, indexace — a checklist obnovy.",
+    "category": "SEO · Technika",
+    "date": "2026-04-08",
+    "tags": ["technické seo", "audit"]
+  },
+  {
+    "slug": "jak-merit-vysledky-seo",
+    "ruSlug": "kak-izmerit-rezultaty-seo",
+    "title": "Jak měřit efektivitu SEO: metriky, reporty a realistická očekávání",
+    "excerpt": "Jak poznat, že SEO skutečně funguje: metriky v Search Console a GA4 a proč výsledek nepřijde v prvním měsíci.",
+    "category": "SEO · Analytika",
+    "date": "2026-04-15",
+    "tags": ["search console", "optimalizace"]
+  },
+  {
+    "slug": "seo-clanky-a-blog",
+    "ruSlug": "seo-stati-i-blog",
+    "title": "Jak psát SEO články pro blog: struktura pro Google a AI Overviews",
+    "excerpt": "Struktura SEO článku, který rankuje v Google a cituje se v AI odpovědích: lead-box, H2 podotázky, tabulky, FAQ a schema.",
+    "category": "SEO · Obsah",
+    "date": "2026-04-29",
+    "tags": ["obsah", "AI vyhledávání"]
+  },
+  {
+    "slug": "klicova-slova-pro-seo",
+    "ruSlug": "klyuchevye-slova-dlya-seo",
+    "title": "Jak vybrat klíčová slova pro SEO (ne pro Google Ads)",
+    "excerpt": "Sémantika pro SEO není totéž co klíčová slova pro reklamu: intent, klastry a priority stránek, aby obsah nekolidoval sám se sebou.",
+    "category": "SEO · Obsah",
+    "date": "2026-03-11",
+    "tags": ["obsah", "optimalizace"]
+  },
+  {
+    "slug": "seo-pro-mistni-firmy-v-cesku",
+    "ruSlug": "seo-lokalnyj-biznes-chehiya",
+    "title": "SEO pro místní firmy v Česku: Google Maps, GBP a lokální dotazy",
+    "excerpt": "Google Maps, Google Business Profile a lokální dotazy v cs/ru/en — co nastavit sám za týden a co předat agentuře.",
+    "category": "SEO · Lokální",
+    "date": "2026-05-06",
+    "tags": ["lokální seo", "spuštění"]
+  },
+  {
+    "slug": "google-maps-seo-gbp",
+    "ruSlug": "google-maps-seo-gbp",
+    "title": "Jak se dostat do Google Maps: nastavení Google Business Profile a local pack",
+    "excerpt": "Jak nastavit GBP, dostat se do local packu a získávat poptávky z Google Maps — ne jen z webu, krok za krokem pro lokální firmy.",
+    "category": "SEO · Lokální",
+    "date": "2026-05-13",
+    "tags": ["lokální seo", "spuštění"]
+  },
+  {
+    "slug": "jak-zvysit-pozice-webu-ve-vyhledavani",
+    "ruSlug": "kak-uluchshit-pozicii-sayta-v-poiskovikah",
+    "title": "Jak zvýšit pozice webu ve vyhledávání: 8 kroků, které skutečně fungují",
+    "excerpt": "Osm konkrétních kroků, které skutečně posouvají web výš ve výsledcích Google — od techniky po obsah a vnitřní odkazy.",
+    "category": "SEO · Obsah",
+    "date": "2026-07-08",
+    "tags": ["optimalizace", "technické seo", "obsah"]
+  }
+]
