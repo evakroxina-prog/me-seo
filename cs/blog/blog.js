@@ -244,7 +244,7 @@
           '<div class="cookie-banner__inner">' +
             '<p class="cookie-banner__text">' +
               "Používáme soubory cookie pro analytiku (Google Analytics). Kliknutím na „Přijmout“ souhlasíte s jejich použitím. " +
-              '<a href="https://marketexpert.cz/cookie-policy" target="_blank" rel="noopener noreferrer" class="cookie-banner__link">Zásady cookies</a>' +
+              '<a href="https://marketexpert.cz/cs-cz/cookie-policy" target="_blank" rel="noopener noreferrer" class="cookie-banner__link">Zásady cookies</a>' +
             "</p>" +
             '<div class="cookie-banner__actions">' +
               '<button type="button" class="cookie-banner__btn cookie-banner__btn--ghost" data-cookie-reject>Odmítnout</button>' +
