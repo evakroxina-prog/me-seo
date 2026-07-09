@@ -36,7 +36,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "M:E Agency — SEO",
-  "description": "SEO optimalizace a propagace webu v Česku: audit, technické SEO, obsah, měsíční správa. Seo services Prague, website SEO Czech Republic.",
+  "description": "SEO optimalizace a propagace webu v Česku: audit, technické SEO, obsah, měsíční správa. Praha a celá ČR.",
   "url": "https://seo.marketexpert.cz/cs/",
   "logo": "https://seo.marketexpert.cz/logo.png",
   "image": "https://seo.marketexpert.cz/logo.png",
@@ -227,13 +227,13 @@ nav.nav-open {
 .nav-links .nav-link:hover { color: #fff; }
 .nav-links .nav-link:hover::after { right: 0; }
 .nav-cta {
-  background: var(--orange) !important; color: #fff !important;
+  background: var(--orange) !important; color: var(--burg-dark) !important;
   padding: 10px 22px; border-radius: 4px; border: none;
   font-family: inherit; font-size: 12px; font-weight: 700 !important;
   letter-spacing: .1em; text-transform: uppercase;
   text-decoration: none !important; display: inline-block; cursor: pointer; transition: background .2s;
 }
-.nav-cta:hover { background: var(--orange-hover) !important; color: #fff !important; }
+.nav-cta:hover { background: var(--orange-hover) !important; color: var(--burg-dark) !important; }
 .nav-phone { text-transform: none; letter-spacing: .03em; white-space: nowrap; }
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; align-items: center;
@@ -337,7 +337,7 @@ nav.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-
 .hero-ticker__track span { padding-right: 3rem; white-space: nowrap; }
 @keyframes heroTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .btn-orange {
-  display: inline-block; background: var(--orange); color: var(--white);
+  display: inline-block; background: var(--orange); color: var(--burg-dark);
   padding: 16px 36px; font-family: 'Montserrat', sans-serif;
   font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   text-decoration: none; border-radius: 4px; transition: background 0.2s, transform 0.15s;
@@ -574,6 +574,35 @@ section { padding: 80px 48px; }
 .price-hint p + p { margin-top: 6px; }
 .price-hint a { color: var(--burg); font-weight: 600; }
 .price-hint strong { color: var(--burg); }
+.section-cta {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding: 22px 24px;
+  border-radius: 6px;
+}
+.section-cta p { margin: 0; font-size: 15px; line-height: 1.5; max-width: 560px; }
+.section-cta--light {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.section-cta--light p { color: rgba(255,255,255,.78); }
+.section-cta--plain {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange);
+  max-width: 820px;
+}
+.section-cta--plain p { color: var(--text-mid); }
+.section-cta--center {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.price-hint .btn-orange { margin-top: 14px; }
 .agency-block { background: var(--bg-light); padding: 60px 48px; }
 .agency-inner {
   background: var(--white); border: 1px solid var(--border); border-left: 5px solid var(--orange);
@@ -655,7 +684,7 @@ section { padding: 80px 48px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-grid .field { display: flex; flex-direction: column; gap: 6px; }
 .field-full { grid-column: 1 / -1; }
-.form-grid .field label { font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(247,242,234,.5); }
+.form-grid .field label { font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(247,242,234,.72); }
 .form-grid .field input, .form-grid .field textarea {
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px;
   padding: 13px 14px; font-size: 14px; color: #fff; font-family: 'Open Sans', sans-serif; outline: none; width: 100%;
@@ -667,13 +696,15 @@ section { padding: 80px 48px; }
 .pkg-opt span { display: inline-block; padding: 9px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: 20px; font-size: 12px; color: rgba(247,242,234,.75); }
 .pkg-opt input:checked + span { background: var(--orange); border-color: var(--orange); color: #fff; font-weight: 600; }
 .form-submit {
-  grid-column: 1 / -1; background: var(--orange); color: #fff; font-weight: 800; font-size: 13px;
+  grid-column: 1 / -1; background: var(--orange); color: var(--burg-dark); font-weight: 800; font-size: 13px;
   letter-spacing: .14em; text-transform: uppercase; padding: 17px; border: none; border-radius: 10px;
   cursor: pointer; font-family: 'Montserrat', sans-serif;
 }
 .form-submit:hover { background: var(--orange-hover); }
 .form-submit.is-submitted { background: #1f8a50; cursor: default; }
-.form-note { grid-column: 1 / -1; font-size: 11.5px; color: rgba(247,242,234,.35); text-align: center; }
+.form-note { grid-column: 1 / -1; font-size: 11.5px; color: rgba(247,242,234,.58); text-align: center; line-height: 1.45; }
+.form-note a { color: rgba(247,242,234,.78); text-decoration: underline; text-underline-offset: 2px; }
+.form-note a:hover { color: #fff; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -906,6 +937,10 @@ section { padding: 80px 48px; }
       <p>Monitoring pozic a návštěvnosti, úpravy, obsah, reporty. SEO na pozice a organiku — systematicky z měsíce na měsíc.</p>
     </div>
   </div>
+  <div class="section-cta section-cta--light reveal">
+    <p>Nejste si jisti, kde začít? Na bezplatné konzultaci zjistíme, který směr SEO se hodí pro váš web.</p>
+    <a href="#order" class="btn-orange">Bezplatná konzultace</a>
+  </div>
 </section>
 
 <section class="tech-list-s" id="tech">
@@ -973,7 +1008,8 @@ section { padding: 80px 48px; }
   </div>
   <div class="price-hint reveal">
     <p><strong>Bezplatná úvodní konzultace 20–30 min</strong> — první krok. Přesnou částku sdělíme po krátkém rozboru.</p>
-    <p>Potřebujete marketingovou strategii širší než SEO → <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">consult.marketexpert.cz</a> (placená session 90 min, 100 €).</p>
+    <p>Potřebujete marketingovou strategii širší než SEO → <a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a> (placená session 90 min, 100 €).</p>
+    <a href="#order" class="btn-orange">Zjistit cenu pro můj web</a>
   </div>
 </section>
 
@@ -1008,7 +1044,7 @@ section { padding: 80px 48px; }
       </div>
     </div>
     <div class="ai-standard-copy">
-      <p><span class="ai-accent">40 % vyhledávacích dotazů</span> už zpracovávají neuronové sítě. Vaši konkurenti už získávají pozornost ve výsledcích ChatGPT, Gemini a Perplexity. <span class="ai-accent">A vaše značka tam není vidět.</span></p>
+      <p>Vyhledávací návyky se mění: uživatelé stále častěji dostávají odpovědi v <span class="ai-accent">ChatGPT, Gemini a Perplexity</span> — nejen v klasických výsledcích Googlu. <span class="ai-accent">Pokud tam značka není, ztrácíte pozornost ještě před kliknutím na web.</span></p>
       <p>Web nejen přizpůsobujeme — děláme ho viditelným pro algoritmy AI a atraktivním pro uživatele, optimalizujeme každý snippet pro maximální CTR. Neodevzdávejte podíl na trhu algoritmům — buďte první v jejich výsledcích.</p>
     </div>
     <a href="#order" class="btn-orange" data-sluzba="ai">Zjistit více</a>
@@ -1021,7 +1057,7 @@ section { padding: 80px 48px; }
       <div class="section-label">Proč M:E</div>
       <h2>SEO agentura v <span>Praze</span> — bez zbytečných dodavatelů</h2>
       <p>M:E Agency — internetový marketing v Česku. Tým v češtině, ruštině, angličtině a ukrajinštině. 10+ let v marketingu, poslední roky projekty v ČR a na Slovensku.</p>
-      <p>SEO děláme v návaznosti na <a href="https://ads.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">reklamu Google Ads</a>, <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">marketingové konzultace</a> a <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">reputaci v Google Mapách</a>. SEO pro weby v Česku — s pochopením lokálního trhu.</p>
+      <p>SEO děláme v návaznosti na <a href="https://ads.marketexpert.cz/cz/">reklamu Google Ads</a>, <a href="https://consult.marketexpert.cz/cs/">marketingové konzultace</a> a <a href="https://reputation.marketexpert.cz/cz/">reputaci v Google Mapách</a>. SEO pro weby v Česku — s pochopením lokálního trhu.</p>
     </div>
     <div class="agency-right">
       <h3>Čím se lišíme od typické seo agentury:</h3>
@@ -1060,7 +1096,7 @@ section { padding: 80px 48px; }
     </details>
     <details class="faq-item">
       <summary>Kolik SEO stojí? Máte balíčky?</summary>
-      <p>Fixní balíčky nemáme — rozsah práce počítáme individuálně podle webu, oboru a jazykových verzí (RU/CZ/EN/UKR). Orientačně: SEO audit od 100 €, měsíční správa od 350 €/měs. Přesnou částku sdělíme po krátkém rozboru. Potřebujete marketingovou strategii? Objednejte placenou session (90 minut, 100 €) na <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">consult.marketexpert.cz</a>.</p>
+      <p>Fixní balíčky nemáme — rozsah práce počítáme individuálně podle webu, oboru a jazykových verzí (RU/CZ/EN/UKR). Orientačně: SEO audit od 100 €, měsíční správa od 350 €/měs. Přesnou částku sdělíme po krátkém rozboru. Potřebujete marketingovou strategii? Objednejte placenou session (90 minut, 100 €) na <a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a>.</p>
     </details>
     <details class="faq-item">
       <summary>Co zahrnují vaše SEO služby?</summary>
@@ -1071,7 +1107,7 @@ section { padding: 80px 48px; }
         <li><strong>Obsah:</strong> psaní článků a úprava stávajících stránek.</li>
         <li><strong>Měsíční správa:</strong> monitoring pozic, úpravy, reporty.</li>
       </ul>
-      <p>Lokální SEO (Google Business Profile, recenze) — samostatný směr na <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">reputation.marketexpert.cz/cz</a>.</p>
+      <p>Lokální SEO (Google Business Profile, recenze) — samostatný směr na <a href="https://reputation.marketexpert.cz/cz/">reputation.marketexpert.cz/cz</a>.</p>
     </details>
     <div class="faq-more is-collapsed" id="faqMore">
       <details class="faq-item">
@@ -1088,7 +1124,7 @@ section { padding: 80px 48px; }
       </details>
       <details class="faq-item">
         <summary>Čím se SEO liší od Google Ads?</summary>
-        <p>Reklama v Google přináší návštěvnost hned, dokud platíte za kliky. SEO je organika: výsledek se buduje měsíce, ale za kliky neplatíte. Často funguje kombinace: reklama pro rychlé poptávky, SEO pro dlouhodobý tok. Google Ads řešíme na <a href="https://ads.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">ads.marketexpert.cz</a>.</p>
+        <p>Reklama v Google přináší návštěvnost hned, dokud platíte za kliky. SEO je organika: výsledek se buduje měsíce, ale za kliky neplatíte. Často funguje kombinace: reklama pro rychlé poptávky, SEO pro dlouhodobý tok. Google Ads řešíme na <a href="https://ads.marketexpert.cz/cz/">ads.marketexpert.cz</a>.</p>
       </details>
       <details class="faq-item">
         <summary>Jak rychle uvidím výsledky a jak je měřit?</summary>
@@ -1104,7 +1140,7 @@ section { padding: 80px 48px; }
       </details>
       <details class="faq-item">
         <summary>Pracujete jen v Praze, nebo po celé ČR?</summary>
-        <p>Základ v Praze, klienty máme po celé ČR (Brno, Plzeň a další) i online. Schůzky Zoom/Meet nebo osobně v Praze. Služby pro Google Mapy a recenze — na <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">reputation.marketexpert.cz/cz</a>. Obecné SEO webu — zde.</p>
+        <p>Základ v Praze, klienty máme po celé ČR (Brno, Plzeň a další) i online. Schůzky Zoom/Meet nebo osobně v Praze. Služby pro Google Mapy a recenze — na <a href="https://reputation.marketexpert.cz/cz/">reputation.marketexpert.cz/cz</a>. Obecné SEO webu — zde.</p>
       </details>
       <details class="faq-item">
         <summary>Web jsme nedávno předělali — potřebujeme SEO znovu?</summary>
@@ -1116,7 +1152,7 @@ section { padding: 80px 48px; }
       </details>
       <details class="faq-item">
         <summary>Kdo je M:E Agency a čím se lišíte od typické seo agentury?</summary>
-        <p>M:E Agency — internetový marketing v Praze. Tým mluví česky, rusky, anglicky a ukrajinsky. 10+ let v marketingu. SEO propojujeme s reklamou (<a href="https://ads.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">ads.marketexpert.cz</a>), konzultacemi (<a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">consult.marketexpert.cz</a>) a reputací (<a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">reputation.marketexpert.cz/cz</a>) — nemusíte hledat více dodavatelů. Bez univerzálních balíčků: nejdřív bezplatná konzultace, pak rozsah podle vašeho projektu.</p>
+        <p>M:E Agency — internetový marketing v Praze. Tým mluví česky, rusky, anglicky a ukrajinsky. 10+ let v marketingu. SEO propojujeme s reklamou (<a href="https://ads.marketexpert.cz/cz/">ads.marketexpert.cz</a>), konzultacemi (<a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a>) a reputací (<a href="https://reputation.marketexpert.cz/cz/">reputation.marketexpert.cz/cz</a>) — nemusíte hledat více dodavatelů. Bez univerzálních balíčků: nejdřív bezplatná konzultace, pak rozsah podle vašeho projektu.</p>
       </details>
       <details class="faq-item">
         <summary>Potřebuje mé podnikání SEO?</summary>
@@ -1127,6 +1163,10 @@ section { padding: 80px 48px; }
       <span class="faq-more-btn-label">Zobrazit dalších 12 otázek</span>
       <span class="faq-more-btn-icon" aria-hidden="true">▼</span>
     </button>
+    <div class="section-cta section-cta--plain section-cta--center reveal">
+      <p>Zůstaly otázky? Pošlete poptávku — odpovíme a navrhneme další krok pro váš web.</p>
+      <a href="#order" class="btn-orange">Objednat konzultaci</a>
+    </div>
   </div>
 </section>
 
@@ -1180,7 +1220,7 @@ section { padding: 80px 48px; }
           <textarea id="leadMessage" name="message" rows="3" placeholder="URL webu, obor, co od SEO očekáváte?"></textarea>
         </div>
         <button type="submit" class="form-submit"><span>Odeslat poptávku</span></button>
-        <div class="form-note">Bez spamu — ozveme se jen kvůli vaší poptávce. <a href="https://marketexpert.cz/cs-cz/cookie-policy" style="color:rgba(247,242,234,.5)">Zásady cookies</a></div>
+        <div class="form-note">Bez spamu — ozveme se jen kvůli vaší poptávce. Odesláním souhlasíte se <a href="https://marketexpert.cz/cs-cz/privacy-policy">zpracováním osobních údajů</a>. <a href="https://marketexpert.cz/cs-cz/cookie-policy">Zásady cookies</a></div>
       </div>
     </form>
   </div>
@@ -1194,12 +1234,12 @@ section { padding: 80px 48px; }
     </a>
     <div class="site-footer__middle">
       <div class="site-footer__links" role="navigation" aria-label="Další služby M:E">
-        <a href="https://consult.marketexpert.cz/cs/" target="_blank" rel="noopener noreferrer">Konzultace</a>
-        <a href="https://ads.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Reklama</a>
-        <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Landingy</a>
-        <a href="https://reputation.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer">Reputace</a>
+        <a href="https://consult.marketexpert.cz/cs/">Konzultace</a>
+        <a href="https://ads.marketexpert.cz/cz/">Reklama</a>
+        <a href="https://landing.marketexpert.cz/cz/">Landingy</a>
+        <a href="https://reputation.marketexpert.cz/cz/">Reputace</a>
       </div>
-      <div class="site-footer__cookie"><a href="https://marketexpert.cz/cs-cz/cookie-policy" target="_blank" rel="noopener noreferrer">Zásady cookies</a></div>
+      <div class="site-footer__cookie"><a href="https://marketexpert.cz/cs-cz/cookie-policy">Zásady cookies</a></div>
     </div>
     <div class="site-footer__contact">
       <a href="mailto:seo@marketexpert.cz">seo@marketexpert.cz</a>
@@ -1209,7 +1249,7 @@ section { padding: 80px 48px; }
   <div class="site-footer__copy-row">
     <p class="site-footer__copy">© 2026 M:E Agency · Praha · SEO</p>
     <p class="site-footer__crafted">
-      <a href="https://landing.marketexpert.cz/cz/" target="_blank" rel="noopener noreferrer"><span class="site-footer__crafted-label">Created by</span><span class="site-footer__crafted-brand"><span class="site-footer__crafted-me">M:E</span> <em>agency</em></span></a>
+      <a href="https://landing.marketexpert.cz/cz/"><span class="site-footer__crafted-label">Created by</span><span class="site-footer__crafted-brand"><span class="site-footer__crafted-me">M:E</span> <em>agency</em></span></a>
     </p>
   </div>
 </footer>
@@ -1220,7 +1260,7 @@ section { padding: 80px 48px; }
 
 <div id="cookie-banner" class="cookie-banner cookie-banner--closed" role="dialog" aria-label="Soubory cookie" aria-hidden="true">
   <div class="cookie-banner__inner">
-    <p class="cookie-banner__text">Používáme soubory cookie pro analytiku (Google Analytics a Microsoft Clarity). Kliknutím na „Přijmout“ s tím souhlasíte. <a href="https://marketexpert.cz/cs-cz/cookie-policy" target="_blank" rel="noopener noreferrer" class="cookie-banner__link">Zásady cookies</a></p>
+    <p class="cookie-banner__text">Používáme soubory cookie pro analytiku (Google Analytics a Microsoft Clarity). Kliknutím na „Přijmout“ s tím souhlasíte. <a href="https://marketexpert.cz/cs-cz/cookie-policy" class="cookie-banner__link">Zásady cookies</a></p>
     <div class="cookie-banner__actions">
       <button type="button" class="cookie-banner__btn cookie-banner__btn--ghost" data-cookie-reject>Odmítnout</button>
       <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" data-cookie-accept>Přijmout</button>
