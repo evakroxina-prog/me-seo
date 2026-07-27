@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://seo.marketexpert.cz/">
 <link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/">
 <link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/">
-<link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/">
+<link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SEO для бизнеса в Праге — аудит, оптимизация сайта, ведение | M:E Agency">
 <meta property="og:description" content="SEO-продвижение и оптимизация сайтов в Чехии: аудит, техническое SEO, статьи, ежемесячное ведение. Бесплатная консультация.">
@@ -181,7 +181,7 @@
   ]
 }
 </script>
-<script>window.__GA4_MEASUREMENT_ID__ = 'G-SPKHXMCQGM'; window.__GA4_ADS_ID__ = 'AW-11432613975';</script>
+<script>window.__ME_SERVICE__ = 'seo'; window.__GA4_MEASUREMENT_ID__ = 'G-SPKHXMCQGM'; window.__GA4_ADS_ID__ = 'AW-11432613975';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -734,9 +734,11 @@ section { padding: 80px 48px; }
   .nav-links {
     display: flex; position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
     flex-direction: column; padding: 12px 20px 32px; background: var(--burg);
-    opacity: 0; visibility: hidden; pointer-events: none;
+    opacity: 0; visibility: hidden; pointer-events: none; z-index: 200;
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
   }
   nav.nav-open .nav-links { opacity: 1; visibility: visible; pointer-events: auto; }
+  html.nav-open, html.nav-open body { overflow: hidden; touch-action: none; }
   .nav-links .nav-link { padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   section, .agency-block { padding: 56px 24px; }
   .hero { padding: 100px 24px 48px; touch-action: pan-y; }
@@ -824,9 +826,16 @@ section { padding: 80px 48px; }
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
   toggle.addEventListener('click', function(){ setOpen(!nav.classList.contains('nav-open')); });
-  menu.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('nav-open')) setOpen(false); });
   window.addEventListener('resize', function(){ if (window.innerWidth > 960) setOpen(false); });
+  // Keep mobile menu from covering the lead form (same burgundy → looks like “broken” form)
+  document.addEventListener('focusin', function(e){
+    if (e.target && e.target.closest && e.target.closest('#leadForm, #order')) setOpen(false);
+  });
+  document.addEventListener('click', function(e){
+    if (e.target && e.target.closest && e.target.closest('a[href="#order"], #leadForm, #order')) setOpen(false);
+  }, true);
   document.querySelectorAll('.lang-switch').forEach(function(sw){
     var btn = sw.querySelector('.lang-switch__toggle');
     if (!btn) return;
@@ -1190,7 +1199,7 @@ section { padding: 80px 48px; }
     <form id="leadForm" class="form-box" action="https://formspree.io/f/mvznbblj" method="POST">
       <input type="hidden" name="_subject" value="Заявка с RU лендинга — SEO">
       <input type="hidden" name="jazyk" value="RU">
-      <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="_gotcha" value="" tabindex="-1" autocomplete="new-password" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden" readonly>
       <div class="form-head">
         <h3>Оставить заявку</h3>
         <p>Заполните за 40 секунд</p>
@@ -1274,6 +1283,7 @@ section { padding: 80px 48px; }
 <script src="ascii-hero.js"></script>
 <script src="cyber-wave.js"></script>
 <script src="me-analytics.js"></script>
+<script src="me-form-adapter.js"></script>
 <script src="form-success.js"></script>
 <script>
 (function(){
@@ -1429,6 +1439,8 @@ document.addEventListener('submit', function(e){
   e.preventDefault();
   var btn = form.querySelector('.form-submit');
   if (!btn || btn.disabled) return;
+  var hp = form.querySelector('input[name="_gotcha"]');
+  if (hp) hp.value = '';
   var original = btn.innerHTML;
   btn.disabled = true;
   btn.innerHTML = '<span>Отправка…</span>';
@@ -1439,7 +1451,8 @@ document.addEventListener('submit', function(e){
         if (typeof window.trackLeadConversion === 'function') {
           var lang = form.querySelector('input[name="jazyk"]');
           var svc = form.querySelector('input[name="sluzba"]:checked');
-          window.trackLeadConversion({ language: lang ? lang.value : 'RU', package_name: svc ? svc.value : '' });
+          window.trackLeadConversion({
+            form_id: (form && form.id) || 'leadForm', language: lang ? lang.value : 'RU', package_name: svc ? svc.value : '' });
         }
         btn.innerHTML = '<span>✓ Заявка отправлена</span>';
         btn.classList.add('is-submitted');
