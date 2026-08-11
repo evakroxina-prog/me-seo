@@ -207,11 +207,17 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; height: 68px;
 }
-nav.scrolled,
-nav.nav-open {
+nav.scrolled {
   background: rgba(66, 15, 28, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
+}
+/* backdrop-filter on nav clips fixed mobile menu — disable while open */
+nav.nav-open {
+  background: rgba(66, 15, 28, 0.98);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
 }
 .nav-logo { min-width: 0; }
@@ -666,7 +672,7 @@ section { padding: 80px 48px; }
 .order-pts.stagger.visible > .order-pt:nth-child(1) { transition-delay: 0.12s; }
 .order-pts.stagger.visible > .order-pt:nth-child(2) { transition-delay: 0.24s; }
 .order-pts.stagger.visible > .order-pt:nth-child(3) { transition-delay: 0.36s; }
-.order-pt { display: flex; gap: 14px; align-items: flex-start; font-size: 13px; color: rgba(255,255,255,.72); }
+.order-pt { display: flex; gap: 14px; align-items: center; font-size: 13px; color: rgba(255,255,255,.72); }
 .order-pt .ck {
   width: 34px; height: 34px; flex-shrink: 0; border: 1px solid rgba(232,148,26,.4); border-radius: 50%;
   display: flex; align-items: center; justify-content: center; color: var(--orange); font-weight: 700;
@@ -803,6 +809,7 @@ section { padding: 80px 48px; }
     <a href="#services" class="nav-link">Služby</a>
     <a href="#process" class="nav-link">Proces</a>
     <a href="/cs/blog/" class="nav-link">Znalostní báze</a>
+    <a href="/cs/nastroje/seo-kontrola-webu/" class="nav-link">SEO test</a>
     <a href="#faq" class="nav-link">FAQ</a>
     <div class="lang-switch">
       <button type="button" class="lang-switch__toggle" aria-expanded="false" aria-haspopup="listbox" aria-label="Vybrat jazyk">
@@ -867,10 +874,10 @@ section { padding: 80px 48px; }
           <span class="hero-type-text"></span><span class="hero-cursor">▌</span>
         </span>
       </h1>
-      <p>SEO audit, technická optimalizace, obsah, správa a adaptace pro AI vyhledávače (Google AI Overviews). Bezplatná úvodní konzultace — zjistíme, zda SEO dává smysl a kde začít.</p>
+      <p>SEO audit, technická optimalizace, obsah, správa a adaptace pro AI vyhledávače (Google AI Overviews). Bezplatná úvodní konzultace — ukážeme, jak vám SEO může přivést více klientů a kde začít.</p>
       <div class="hero-btns">
         <a href="#order" class="btn-orange">Bezplatná konzultace</a>
-        <a href="#services" class="btn-outline">Co zahrnuje</a>
+        <a href="/cs/nastroje/seo-kontrola-webu/" class="btn-outline">SEO test webu</a>
       </div>
     </div>
   </div>
@@ -1232,7 +1239,7 @@ section { padding: 80px 48px; }
           <textarea id="leadMessage" name="message" rows="3" placeholder="URL webu, obor, co od SEO očekáváte?"></textarea>
         </div>
         <button type="submit" class="form-submit"><span>Odeslat poptávku</span></button>
-        <div class="form-note">Bez spamu — ozveme se jen kvůli vaší poptávce. Odesláním souhlasíte se <a href="https://marketexpert.cz/cs-cz/privacy-policy">zpracováním osobních údajů</a>. <a href="https://marketexpert.cz/cs-cz/cookie-policy">Zásady cookies</a></div>
+        <div class="form-note">Bez spamu — ozveme se jen kvůli vaší poptávce. Odesláním souhlasíte se zpracováním údajů. <a href="https://marketexpert.cz/cs-cz/cookie-policy">Zásady cookies</a></div>
       </div>
     </form>
   </div>
@@ -1240,7 +1247,7 @@ section { padding: 80px 48px; }
 
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <a href="https://marketexpert.cz/" class="site-footer__brand">
+    <a href="/" class="site-footer__brand">
       <img src="../logo.png" alt="M:E agency" class="nav-brand__img" decoding="async">
       <span class="site-footer__brand-text">M:E <em>agency</em></span>
     </a>
@@ -1451,7 +1458,12 @@ document.addEventListener('submit', function(e){
           var lang = form.querySelector('input[name="jazyk"]');
           var svc = form.querySelector('input[name="sluzba"]:checked');
           window.trackLeadConversion({
-            form_id: (form && form.id) || 'leadForm', language: lang ? lang.value : 'CS', package_name: svc ? svc.value : '' });
+            form_id: (form && form.id) || 'leadForm',
+            language: lang ? lang.value : 'CS',
+            package_name: svc ? svc.value : '',
+            email: (form.querySelector('input[name="email"], input[type="email"]') || {}).value || '',
+            phone: (form.querySelector('input[name="phone"], input[type="tel"]') || {}).value || ''
+          });
         }
         btn.innerHTML = '<span>✓ Poptávka odeslána</span>';
         btn.classList.add('is-submitted');
