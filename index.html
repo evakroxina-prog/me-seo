@@ -208,11 +208,17 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; height: 68px;
 }
-nav.scrolled,
-nav.nav-open {
+nav.scrolled {
   background: rgba(66, 15, 28, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
+}
+/* backdrop-filter on nav clips fixed mobile menu — disable while open */
+nav.nav-open {
+  background: rgba(66, 15, 28, 0.98);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
 }
 .nav-logo { min-width: 0; }
@@ -667,7 +673,7 @@ section { padding: 80px 48px; }
 .order-pts.stagger.visible > .order-pt:nth-child(1) { transition-delay: 0.12s; }
 .order-pts.stagger.visible > .order-pt:nth-child(2) { transition-delay: 0.24s; }
 .order-pts.stagger.visible > .order-pt:nth-child(3) { transition-delay: 0.36s; }
-.order-pt { display: flex; gap: 14px; align-items: flex-start; font-size: 13px; color: rgba(255,255,255,.72); }
+.order-pt { display: flex; gap: 14px; align-items: center; font-size: 13px; color: rgba(255,255,255,.72); }
 .order-pt .ck {
   width: 34px; height: 34px; flex-shrink: 0; border: 1px solid rgba(232,148,26,.4); border-radius: 50%;
   display: flex; align-items: center; justify-content: center; color: var(--orange); font-weight: 700;
@@ -805,6 +811,7 @@ section { padding: 80px 48px; }
     <a href="#process" class="nav-link">Процесс</a>
     <a href="#faq" class="nav-link">FAQ</a>
     <a href="/blog/" class="nav-link">Гайды</a>
+    <a href="/nastroje/proverka-seo-sajta/" class="nav-link">SEO-тест</a>
     <div class="lang-switch">
       <button type="button" class="lang-switch__toggle" aria-expanded="false" aria-haspopup="listbox" aria-label="Выбрать язык">
         <span class="lang-switch__current">RU</span><span class="lang-switch__chev" aria-hidden="true">▾</span>
@@ -868,10 +875,10 @@ section { padding: 80px 48px; }
           <span class="hero-type-text"></span><span class="hero-cursor">▌</span>
         </span>
       </h1>
-      <p>SEO-аудит, техническая оптимизация, контент, ведение и адаптация под AI-поисковики (Google AI Overviews). Бесплатная первичная консультация — разберём, нужен ли вам SEO и с чего начать.</p>
+      <p>SEO-аудит, техническая оптимизация, контент, ведение и адаптация под AI-поисковики (Google AI Overviews). Бесплатная первичная консультация — разберём, как SEO может привлечь для вас больше клиентов и с чего начать.</p>
       <div class="hero-btns">
         <a href="#order" class="btn-orange">Бесплатная консультация</a>
-        <a href="#services" class="btn-outline">Что входит</a>
+        <a href="/nastroje/proverka-seo-sajta/" class="btn-outline">SEO-тест сайта</a>
       </div>
     </div>
   </div>
@@ -1233,7 +1240,7 @@ section { padding: 80px 48px; }
           <textarea id="leadMessage" name="message" rows="3" placeholder="URL сайта, ниша, что хотите от SEO?"></textarea>
         </div>
         <button type="submit" class="form-submit"><span>Отправить заявку</span></button>
-        <div class="form-note">Без спама — свяжемся только по вашей заявке. Отправляя форму, вы соглашаетесь на <a href="https://marketexpert.cz/privacy-policy">обработку персональных данных</a>. <a href="https://marketexpert.cz/cookie-policy">Политика cookie</a></div>
+        <div class="form-note">Без спама — свяжемся только по вашей заявке. Отправляя форму, вы соглашаетесь на обработку данных. <a href="https://marketexpert.cz/cookie-policy">Политика cookie</a></div>
       </div>
     </form>
   </div>
@@ -1241,7 +1248,7 @@ section { padding: 80px 48px; }
 
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <a href="https://marketexpert.cz/" class="site-footer__brand">
+    <a href="/" class="site-footer__brand">
       <img src="logo.png" alt="M:E agency" class="nav-brand__img" decoding="async">
       <span class="site-footer__brand-text">M:E <em>agency</em></span>
     </a>
@@ -1452,7 +1459,12 @@ document.addEventListener('submit', function(e){
           var lang = form.querySelector('input[name="jazyk"]');
           var svc = form.querySelector('input[name="sluzba"]:checked');
           window.trackLeadConversion({
-            form_id: (form && form.id) || 'leadForm', language: lang ? lang.value : 'RU', package_name: svc ? svc.value : '' });
+            form_id: (form && form.id) || 'leadForm',
+            language: lang ? lang.value : 'RU',
+            package_name: svc ? svc.value : '',
+            email: (form.querySelector('input[name="email"], input[type="email"]') || {}).value || '',
+            phone: (form.querySelector('input[name="phone"], input[type="tel"]') || {}).value || ''
+          });
         }
         btn.innerHTML = '<span>✓ Заявка отправлена</span>';
         btn.classList.add('is-submitted');

@@ -1,6 +1,6 @@
 /**
  * ME Agency — analytics + Consent Mode v2 (SAFE v2 Gate 2)
- * Version: 2026-07-20
+ * Version: 2026-08-11 (Enhanced Conversions)
  *
  * - Default consent: all four denied BEFORE any gtag config/event
  * - Analytics load only after accept
@@ -192,7 +192,9 @@
     s.onload = function () {
       window.gtag('config', id, { anonymize_ip: true });
       var aw = adsId();
-      if (aw) window.gtag('config', aw);
+      if (aw) {
+        window.gtag('config', aw, { allow_enhanced_conversions: true });
+      }
     };
   }
 
@@ -240,6 +242,7 @@
   /**
    * Fire once after Formspree 2xx.
    * Params: client_submission_id (required), provider_submission_id?, service, locale, form_id
+   * Optional for Enhanced Conversions: email, phone (normalized + SHA-256; never logged)
    * Meaning: provider accepted form — NOT a CRM lead_id.
    */
   function newClientSubmissionId() {
@@ -249,6 +252,66 @@
       }
     } catch (_) {}
     return 'cs_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);
+  }
+
+  function normalizeEmail(email) {
+    if (!email || typeof email !== 'string') return '';
+    return email.trim().toLowerCase();
+  }
+
+  function normalizePhone(phone) {
+    if (!phone || typeof phone !== 'string') return '';
+    var digits = phone.replace(/[^\d+]/g, '');
+    if (!digits) return '';
+    if (digits.charAt(0) !== '+') {
+      var only = digits.replace(/\D/g, '');
+      if (only.indexOf('420') === 0 && only.length >= 12) return '+' + only;
+      if (only.length === 9) return '+420' + only;
+      if (only.length >= 10) return '+' + only;
+      return '';
+    }
+    return digits;
+  }
+
+  function sha256Hex(str) {
+    if (!str || !window.crypto || !window.crypto.subtle || !window.TextEncoder) {
+      return Promise.resolve('');
+    }
+    try {
+      return window.crypto.subtle
+        .digest('SHA-256', new TextEncoder().encode(str))
+        .then(function (buf) {
+          return Array.prototype.map
+            .call(new Uint8Array(buf), function (b) {
+              return ('0' + b.toString(16)).slice(-2);
+            })
+            .join('');
+        })
+        .catch(function () {
+          return '';
+        });
+    } catch (_) {
+      return Promise.resolve('');
+    }
+  }
+
+  function buildEnhancedUserData(meta) {
+    var email = normalizeEmail(meta && (meta.email || meta.Email));
+    var phone = normalizePhone(meta && (meta.phone || meta.phone_number || meta.telefon || meta.tel));
+    var jobs = [];
+    if (email) jobs.push(sha256Hex(email).then(function (h) { return h ? { email: h } : null; }));
+    if (phone) jobs.push(sha256Hex(phone).then(function (h) { return h ? { phone_number: h } : null; }));
+    if (!jobs.length) return Promise.resolve(null);
+    return Promise.all(jobs).then(function (parts) {
+      var out = {};
+      parts.forEach(function (p) {
+        if (p) {
+          if (p.email) out.sha256_email_address = p.email;
+          if (p.phone_number) out.sha256_phone_number = p.phone_number;
+        }
+      });
+      return Object.keys(out).length ? out : null;
+    });
   }
 
   function trackLeadConversion(meta) {
@@ -284,26 +347,30 @@
       payload.provider_submission_id = String(data.provider_submission_id);
     }
 
-    window.gtag('event', 'generate_lead', payload);
-
-    // Google Ads primary conversion (SUBMIT_LEAD_FORM) — fire only after Formspree 2xx
-    window.gtag('event', 'conversion_event_submit_lead_form', {
-      value: 1,
-      currency: 'EUR'
-    });
-
     try {
       sessionStorage.setItem(dedupeKey, '1');
     } catch (_) {}
 
     var sendTo = leadSendTo();
-    if (sendTo) {
-      window.gtag('event', 'conversion', {
-        send_to: sendTo,
-        value: 1,
-        currency: 'EUR'
-      });
-    }
+
+    buildEnhancedUserData(data).then(function (userData) {
+      if (userData) {
+        try {
+          window.gtag('set', 'user_data', userData);
+        } catch (_) {}
+      }
+
+      window.gtag('event', 'generate_lead', payload);
+
+      if (sendTo) {
+        var conv = {
+          send_to: sendTo,
+          value: 1,
+          currency: 'EUR'
+        };
+        window.gtag('event', 'conversion', conv);
+      }
+    });
   }
 
   window.trackLeadConversion = trackLeadConversion;

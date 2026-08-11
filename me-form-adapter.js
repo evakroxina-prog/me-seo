@@ -1,6 +1,6 @@
 /**
  * ME Agency — Formspree adapter (SAFE v2 Gate 2)
- * Version: 2026-07-20
+ * Version: 2026-08-11 (Enhanced Conversions: pass email/phone to trackLeadConversion)
  *
  * - Single POST, no automatic retry
  * - Disable submit + aria-busy until response
@@ -80,12 +80,17 @@
       }
     }
 
-    var hp = form.querySelector('input[name="_gotcha"]');
-    if (hp) hp.value = '';
-
     var fd = new FormData(form);
     fd.set('client_submission_id', clientId);
-    fd.set('_gotcha', '');
+
+    var emailVal =
+      (fd.get('email') || fd.get('Email') || '').toString().trim() ||
+      ((form.querySelector('input[type="email"]') || {}).value || '');
+    var phoneVal =
+      (fd.get('phone') || fd.get('telefon') || fd.get('tel') || fd.get('phone_number') || '')
+        .toString()
+        .trim() ||
+      ((form.querySelector('input[type="tel"]') || {}).value || '');
 
     return fetch(form.action, {
       method: 'POST',
@@ -114,7 +119,9 @@
               provider_submission_id: providerId || undefined,
               service: opts.service || serviceFromHost(),
               locale: opts.locale || localeFromDoc(opts.lang),
-              form_id: form.id || opts.form_id || 'leadForm'
+              form_id: form.id || opts.form_id || 'leadForm',
+              email: emailVal || undefined,
+              phone: phoneVal || undefined
             });
           }
 
