@@ -111,6 +111,11 @@
   flex-direction: column;
   gap: 10px;
 }
+.form-success__blog[hidden],
+.form-success__extra[hidden],
+.form-success__wa[hidden] {
+  display: none !important;
+}
 .form-success__blog {
   display: inline-flex;
   align-items: center;

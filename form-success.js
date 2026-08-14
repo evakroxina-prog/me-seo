@@ -132,7 +132,10 @@
       blogBtn.textContent = t.blogBtn;
     } else {
       extra.hidden = true;
+      extra.innerHTML = '';
       blogBtn.hidden = true;
+      blogBtn.removeAttribute('href');
+      blogBtn.textContent = '';
     }
     el.querySelector('.form-success__close').textContent = t.close;
 
