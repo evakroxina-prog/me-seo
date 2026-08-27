@@ -5,15 +5,34 @@
     <loc>https://seo.marketexpert.cz/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/"/>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://seo.marketexpert.cz/cs/nastroje/seo-kontrola-webu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/nastroje/seo-kontrola-webu/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/nastroje/proverka-seo-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/nastroje/seo-kontrola-webu/"/>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://seo.marketexpert.cz/nastroje/proverka-seo-sajta/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/nastroje/proverka-seo-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/nastroje/seo-kontrola-webu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/nastroje/seo-kontrola-webu/"/>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://seo.marketexpert.cz/blog/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/"/>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -22,6 +41,7 @@
     <loc>https://seo.marketexpert.cz/blog/chto-takoe-seo/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/chto-takoe-seo/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/co-je-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/co-je-seo/"/>
     <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,6 +50,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-vs-google-ads/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-vs-google-ads/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-nebo-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-nebo-google-ads/"/>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,6 +59,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-audit-chto-vhodit/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-audit-chto-vhodit/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-audit-co-zahrnuje/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-audit-co-zahrnuje/"/>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -46,6 +68,7 @@
     <loc>https://seo.marketexpert.cz/blog/tehnicheskoe-seo-chto-eto/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/tehnicheskoe-seo-chto-eto/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/technicke-seo-co-to-je/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/technicke-seo-co-to-je/"/>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -54,6 +77,7 @@
     <loc>https://seo.marketexpert.cz/blog/google-search-console-nastroyka/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/"/>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -62,6 +86,7 @@
     <loc>https://seo.marketexpert.cz/blog/klyuchevye-slova-dlya-seo/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/klyuchevye-slova-dlya-seo/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/klicova-slova-pro-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/klicova-slova-pro-seo/"/>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,6 +95,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-dlya-ai-poiska-geo/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-dlya-ai-poiska-geo/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-pro-ai-vyhledavani-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-pro-ai-vyhledavani-geo/"/>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -78,6 +104,7 @@
     <loc>https://seo.marketexpert.cz/blog/skolko-stoit-seo-v-chehii/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/skolko-stoit-seo-v-chehii/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/kolik-stoji-seo-v-cesku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/kolik-stoji-seo-v-cesku/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -86,6 +113,7 @@
     <loc>https://seo.marketexpert.cz/blog/sitemap-robots-canonical/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/sitemap-robots-canonical/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/sitemap-robots-canonical/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/sitemap-robots-canonical/"/>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -94,6 +122,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-posle-redizaina/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-posle-redizaina/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-po-redesignu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-po-redesignu/"/>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -102,6 +131,7 @@
     <loc>https://seo.marketexpert.cz/blog/kak-izmerit-rezultaty-seo/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/kak-izmerit-rezultaty-seo/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/jak-merit-vysledky-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/jak-merit-vysledky-seo/"/>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -110,6 +140,7 @@
     <loc>https://seo.marketexpert.cz/blog/core-web-vitals-seo/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/core-web-vitals-seo/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/"/>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -118,6 +149,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-stati-i-blog/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-stati-i-blog/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-clanky-a-blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-clanky-a-blog/"/>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -126,6 +158,7 @@
     <loc>https://seo.marketexpert.cz/blog/seo-lokalnyj-biznes-chehiya/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-lokalnyj-biznes-chehiya/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-pro-mistni-firmy-v-cesku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-pro-mistni-firmy-v-cesku/"/>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -134,7 +167,7 @@
     <loc>https://seo.marketexpert.cz/cs/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/"/>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -142,6 +175,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -150,6 +184,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/co-je-seo/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/co-je-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/co-je-seo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/chto-takoe-seo/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -158,6 +193,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-nebo-google-ads/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-nebo-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-nebo-google-ads/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-vs-google-ads/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -166,6 +202,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-audit-co-zahrnuje/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-audit-co-zahrnuje/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-audit-co-zahrnuje/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-audit-chto-vhodit/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -174,6 +211,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/technicke-seo-co-to-je/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/technicke-seo-co-to-je/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/technicke-seo-co-to-je/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/tehnicheskoe-seo-chto-eto/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -182,6 +220,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/nastaveni-google-search-console/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-search-console-nastroyka/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -190,6 +229,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/klicova-slova-pro-seo/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/klicova-slova-pro-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/klicova-slova-pro-seo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/klyuchevye-slova-dlya-seo/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -198,6 +238,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-pro-ai-vyhledavani-geo/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-pro-ai-vyhledavani-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-pro-ai-vyhledavani-geo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-dlya-ai-poiska-geo/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -206,6 +247,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/kolik-stoji-seo-v-cesku/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/kolik-stoji-seo-v-cesku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/kolik-stoji-seo-v-cesku/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/skolko-stoit-seo-v-chehii/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -214,6 +256,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/sitemap-robots-canonical/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/sitemap-robots-canonical/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/sitemap-robots-canonical/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/sitemap-robots-canonical/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -222,6 +265,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-po-redesignu/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-po-redesignu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-po-redesignu/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-posle-redizaina/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -230,6 +274,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/jak-merit-vysledky-seo/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/jak-merit-vysledky-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/jak-merit-vysledky-seo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/kak-izmerit-rezultaty-seo/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -238,6 +283,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/core-web-vitals-seo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/core-web-vitals-seo/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -246,6 +292,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-clanky-a-blog/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-clanky-a-blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-clanky-a-blog/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-stati-i-blog/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -254,6 +301,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/seo-pro-mistni-firmy-v-cesku/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/seo-pro-mistni-firmy-v-cesku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/seo-pro-mistni-firmy-v-cesku/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/seo-lokalnyj-biznes-chehiya/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -263,6 +311,7 @@
     <loc>https://seo.marketexpert.cz/blog/google-maps-seo-gbp/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-maps-seo-gbp/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/google-maps-seo-gbp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/google-maps-seo-gbp/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -270,6 +319,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/google-maps-seo-gbp/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/google-maps-seo-gbp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/google-maps-seo-gbp/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/google-maps-seo-gbp/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -279,6 +329,7 @@
     <loc>https://seo.marketexpert.cz/blog/kak-uluchshit-pozicii-sayta-v-poiskovikah/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/kak-uluchshit-pozicii-sayta-v-poiskovikah/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/jak-zvysit-pozice-webu-ve-vyhledavani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/jak-zvysit-pozice-webu-ve-vyhledavani/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -286,6 +337,7 @@
   <url>
     <loc>https://seo.marketexpert.cz/cs/blog/jak-zvysit-pozice-webu-ve-vyhledavani/</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://seo.marketexpert.cz/cs/blog/jak-zvysit-pozice-webu-ve-vyhledavani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/blog/jak-zvysit-pozice-webu-ve-vyhledavani/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://seo.marketexpert.cz/blog/kak-uluchshit-pozicii-sayta-v-poiskovikah/"/>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
