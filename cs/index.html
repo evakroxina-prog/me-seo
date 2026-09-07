@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="../favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SEO optimalizace pro firmy v Česku — audit, správa, technické SEO | M:E Agency</title>
-<meta name="description" content="SEO optimalizace webů v Česku: SEO audit, technické SEO, obsah a pravidelná správa. Úvodní konzultace zdarma. Audit od 2 500 Kč, správa od 8 750 Kč/měs.">
+<meta name="description" content="SEO optimalizace webů v Česku: diagnostika 2 900 Kč, komplexní audit od 9 900 Kč, SEO Růst od 12 500 Kč/měs. Bezplatná konzultace 20–30 minut.">
 <meta name="keywords" content="seo cena, cena seo, seo optimalizace cena, optimalizace seo, seo online, seo praha, seo brno, seo plzeň, seo optimalizace, seo marketing, seo google, seo audit, audit seo, seo agentura, seo konzultant, seo specialista, web seo, seo web, on page seo, onpage seo, seo eshop, local seo, seo offpage, offpage seo, co je seo, seo co to je, seo test, seo nástroje">
 <meta name="robots" content="index, follow">
 <meta name="author" content="M:E Agency">
@@ -21,7 +21,7 @@
 <link rel="alternate" hreflang="x-default" href="https://seo.marketexpert.cz/cs/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SEO optimalizace pro firmy v Česku — audit, správa, technické SEO | M:E Agency">
-<meta property="og:description" content="SEO optimalizace webů v Česku: SEO audit, technické SEO, obsah a správa. Úvodní konzultace zdarma. Audit od 2 500 Kč.">
+<meta property="og:description" content="SEO optimalizace webů v Česku: diagnostika 2 900 Kč, komplexní audit od 9 900 Kč, SEO Růst od 12 500 Kč/měs. Konzultace zdarma.">
 <meta property="og:url" content="https://seo.marketexpert.cz/cs/">
 <meta property="og:image" content="https://seo.marketexpert.cz/logo.png">
 <meta property="og:locale" content="cs_CZ">
@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="M:E Agency">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SEO optimalizace pro firmy v Česku — M:E Agency">
-<meta name="twitter:description" content="SEO optimalizace webů v Česku: audit, technické SEO, obsah a správa. Konzultace zdarma. Audit od 2 500 Kč.">
+<meta name="twitter:description" content="Diagnostika 2 900 Kč, audit od 9 900 Kč, SEO Růst od 12 500 Kč/měs. Konzultace 20–30 minut zdarma.">
 <meta name="twitter:image" content="https://seo.marketexpert.cz/logo.png">
 <script type="application/ld+json">
 {
@@ -49,7 +49,7 @@
   ],
   "serviceType": "Search Engine Optimization",
   "inLanguage": "cs",
-  "priceRange": "od 2500 CZK"
+  "priceRange": "od 2900 CZK"
 }
 </script>
 <script type="application/ld+json">
@@ -70,7 +70,7 @@
       "name": "Kolik SEO stojí? Máte balíčky?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fixní balíčky nemáme — rozsah práce počítáme individuálně podle webu, oboru a jazykových verzí (RU/CZ/EN/UKR). Orientačně: SEO audit od 2 500 Kč (100 €), měsíční správa od 8 750 Kč/měs (350 €). Přesnou částku sdělíme po krátkém rozboru. Potřebujete marketingovou strategii — placená session 90 minut (2 500 Kč / 100 €) na consult.marketexpert.cz/cs/."
+        "text": "Fixní balíčky nemáme. Vstupní SEO diagnostika — 2 900 Kč, komplexní SEO audit — od 9 900 Kč, SEO Růst — od 12 500 Kč/měs. Formát a přesnou částku navrhneme na bezplatné konzultaci 20–30 minut. Potřebujete marketingovou strategii — placená session 90 minut (2 500 Kč / 100 €) na consult.marketexpert.cz/cs/."
       }
     },
     {
@@ -455,6 +455,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 }
 .audit-card h3 { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: var(--burg); margin-bottom: 10px; }
 .audit-card p, .audit-card li { font-size: 13.5px; color: var(--text-mid); line-height: 1.65; }
+.audit-card p + p { margin-top: 8px; }
 .audit-card ul { margin: 0; padding-left: 18px; }
 .audit-card li + li { margin-top: 4px; }
 .audit-card .audit-price {
@@ -628,20 +629,68 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 .steps.stagger.visible > .step:nth-child(3)::before { transition-delay: 0.32s; }
 .steps.stagger.visible > .step:nth-child(4)::before { transition-delay: 0.42s; }
 .pricing-factors { background: var(--white); padding: 52px 48px; }
-.pricing-factors .section-sub { margin-bottom: 24px; }
+.pricing-factors .section-sub { margin-bottom: 28px; max-width: 720px; }
 .pricing-factors > .reveal:first-of-type { margin-bottom: 0 !important; }
-.price-anchors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; margin: 8px 0 28px; }
-.price-anchor {
-  background: var(--bg-light); border: 1px solid var(--border); border-top: 4px solid var(--orange);
-  padding: 22px 20px;
+.price-consult, .price-help {
+  width: 100%; margin: 0 0 20px;
+  display: grid; grid-template-columns: 1fr auto; gap: 16px 28px; align-items: center;
+  background: var(--bg-light); border: 1px solid var(--border); border-left: 4px solid var(--orange);
+  padding: 22px 24px;
 }
-.price-anchor .pa-num { font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 3vw, 28px); font-weight: 800; color: var(--burg); line-height: 1.15; }
-.price-anchor .pa-eur { display: block; font-size: 13px; color: var(--text-light); font-weight: 600; margin-top: 4px; }
-.price-anchor .pa-label { font-size: 13px; color: var(--text-mid); margin-top: 8px; }
-.price-factors-label {
-  font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: var(--burg);
-  margin: 0 0 12px; max-width: 820px;
+.price-consult h3, .price-help h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: var(--burg); margin-bottom: 6px;
 }
+.price-badge {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--burg); background: #fff; border: 1px solid var(--border); padding: 4px 8px; margin: 0 0 10px;
+}
+.price-consult p, .price-help p { font-size: 14px; color: var(--text-mid); line-height: 1.55; margin: 0 0 8px; }
+.price-consult p:last-of-type, .price-help p:last-of-type { margin-bottom: 0; }
+.price-consult .btn-orange, .price-help .btn-orange { white-space: normal; text-align: center; }
+.price-offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-bottom: 20px; align-items: stretch; }
+.price-offer {
+  background: var(--bg-light); border: 1px solid var(--border);
+  padding: 16px 18px 16px; display: flex; flex-direction: column;
+}
+.po-kind {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--orange); margin: 0 0 5px;
+}
+.price-offer h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800; color: var(--burg);
+  line-height: 1.2; margin: 0 0 4px;
+}
+.price-offer .po-num {
+  font-family: 'Montserrat', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 800;
+  color: var(--text-dark); line-height: 1.1; margin-bottom: 6px;
+}
+.price-offer .po-lead { font-size: 13.5px; color: var(--text-mid); line-height: 1.4; margin: 0 0 10px; }
+.po-inc {
+  font-size: 12px; font-weight: 700; color: var(--burg); margin: 0 0 5px; line-height: 1.3;
+}
+.po-list {
+  list-style: none; display: flex; flex-direction: column; gap: 3px;
+  margin: 0 0 8px; padding: 0;
+}
+.po-list li {
+  font-size: 12.5px; line-height: 1.3; color: var(--text-mid);
+  padding-left: 11px; position: relative;
+}
+.po-list li::before {
+  content: ''; position: absolute; left: 0; top: .5em; width: 5px; height: 5px;
+  background: var(--orange);
+}
+.po-note { font-size: 12px; color: var(--text-light); line-height: 1.35; margin: 0 0 8px; }
+.po-out {
+  font-size: 13px; color: var(--text-dark); line-height: 1.4;
+  border-left: 3px solid var(--orange); padding: 6px 8px; margin: 8px 0 0;
+}
+.po-out strong { color: var(--burg); }
+.price-offer .po-cta {
+  display: inline-block; margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 700;
+  color: var(--burg); text-decoration: none;
+}
+.price-offer .po-cta:hover { text-decoration: underline; text-underline-offset: 3px; }
 .factors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 820px; }
 .factor-item {
   display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px;
@@ -787,8 +836,18 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 .pkg-picker { display: flex; flex-wrap: wrap; gap: 6px; }
 .pkg-opt { position: relative; cursor: pointer; }
 .pkg-opt input { position: absolute; opacity: 0; pointer-events: none; }
-.pkg-opt span { display: inline-block; padding: 9px 14px; border: 1px solid rgba(255,255,255,.15); border-radius: 20px; font-size: 12px; color: rgba(247,242,234,.75); }
+.pkg-opt span { display: inline-block; padding: 7px 11px; border: 1px solid rgba(255,255,255,.15); border-radius: 20px; font-size: 11.5px; color: rgba(247,242,234,.75); }
 .pkg-opt input:checked + span { background: var(--orange); border-color: var(--orange); color: #fff; font-weight: 600; }
+.form-modal { position: fixed; inset: 0; z-index: 10001; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .22s ease, visibility .22s ease; }
+.form-modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+.form-modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.72); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+.form-modal-panel { position: relative; z-index: 1; width: 100%; max-width: 580px; max-height: min(92vh,860px); overflow-y: auto; background: var(--burg); border-radius: 18px; padding: 28px 24px 24px; border: 1px solid rgba(245,168,0,.22); box-shadow: 0 24px 64px rgba(0,0,0,.45); animation: formModalIn .24s ease; }
+@keyframes formModalIn { from { opacity: 0; transform: translateY(-14px) scale(.98); } to { opacity: 1; transform: none; } }
+.form-modal-x { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border: none; background: rgba(255,255,255,.08); color: rgba(255,255,255,.7); font-size: 24px; line-height: 1; border-radius: 8px; cursor: pointer; transition: background .2s, color .2s; }
+.form-modal-x:hover { background: rgba(255,255,255,.14); color: #fff; }
+.form-modal-body .form-box { padding: 0; border: none; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.form-modal-body .form-box::before { display: none; }
+html.form-modal-open { overflow: hidden; }
 .form-submit {
   grid-column: 1 / -1; background: var(--orange); color: var(--burg-dark); font-weight: 800; font-size: 13px;
   letter-spacing: .14em; text-transform: uppercase; padding: 17px; border: none; border-radius: 10px;
@@ -842,7 +901,9 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
   .steps { grid-template-columns: 1fr; }
   .tech-list { grid-template-columns: 1fr; }
   .factors-grid { grid-template-columns: 1fr; }
-  .price-anchors { grid-template-columns: 1fr; }
+  .price-offers { grid-template-columns: 1fr; }
+  .price-consult, .price-help { grid-template-columns: 1fr; }
+  .price-consult .btn-orange, .price-help .btn-orange { justify-self: start; white-space: normal; }
   .pricing-factors { padding: 44px 24px; }
   .agency-inner { grid-template-columns: 1fr; }
   .order-s, .faq-s { padding: 64px 24px; }
@@ -965,7 +1026,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
       </p>
       <p class="hero-offer">SEO audit, technické SEO, obsah a pravidelná správa. Bezplatná úvodní konzultace — ukážeme, kde začít.</p>
       <div class="hero-btns">
-        <a href="#order" class="btn-orange">Bezplatná konzultace</a>
+        <a href="#order" class="btn-orange" data-sluzba="konsultace">Bezplatná konzultace</a>
         <a href="#pricing" class="btn-outline">Zjistit cenu SEO</a>
       </div>
     </div>
@@ -981,8 +1042,8 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 </div>
 
 <div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">od 2 500 Kč</div><div class="stat-label">SEO audit</div></div>
-  <div class="stat-item"><div class="stat-num">od 8 750 Kč/měs</div><div class="stat-label">správa SEO</div></div>
+  <div class="stat-item"><div class="stat-num">2 900 Kč</div><div class="stat-label">diagnostika</div></div>
+  <div class="stat-item"><div class="stat-num">od 12 500 Kč/měs</div><div class="stat-label">SEO Růst</div></div>
   <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">let v marketingu</div></div>
   <div class="stat-item"><div class="stat-num">RU · CZ · EN · UKR</div><div class="stat-label">jazyky týmu</div></div>
 </div>
@@ -1044,43 +1105,45 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
     </div>
   </div>
   <div class="section-cta section-cta--plain reveal" style="margin-top:36px">
-    <p>Chcete vědět, jestli se SEO optimalizace vyplatí právě vám? <a href="#order">Probrat na konzultaci →</a></p>
+    <p>Chcete vědět, jestli se SEO optimalizace vyplatí právě vám? <a href="#order" data-sluzba="konsultace">Probrat na konzultaci →</a></p>
   </div>
 </section>
 
 <section class="audit-s" id="seo-audit">
   <div class="reveal" style="margin-bottom:48px">
     <div class="section-label">SEO audit · SEO kontrola</div>
-    <h2 class="section-title">SEO audit a SEO kontrola webu</h2>
-    <p class="section-sub">Diagnostika, ne hádání: co na webu brzdí Google, co opravit jako první a v jakém rozsahu.</p>
+    <h2 class="section-title">SEO audit webu</h2>
+    <p class="section-sub">Diagnostika, ne hádání: zjistíme, co brzdí růst webu v Google, co opravit jako první a jaký rozsah práce je opravdu potřeba.</p>
   </div>
   <div class="audit-grid stagger">
     <div class="audit-card">
       <h3>Co zkontrolujeme</h3>
       <ul>
-        <li>Technika: rychlost, mobil, sitemap/robots, canonical, 404</li>
-        <li>Indexace a chyby v Google Search Console</li>
-        <li>Obsah, title/description, H1 a struktura stránek</li>
-        <li>Konkurence v oboru a priority prací</li>
+        <li>technický stav webu: rychlost, mobile, sitemap/robots, canonical, 404</li>
+        <li>indexaci a chyby v Google Search Console</li>
+        <li>obsah, title/description, H1 a strukturu stránek</li>
+        <li>vyhledávací dotazy a pozice</li>
+        <li>konkurenci ve vašem oboru</li>
+        <li>hlavní příležitosti růstu a priority</li>
       </ul>
     </div>
     <div class="audit-card">
       <h3>Co dostanete</h3>
-      <p>Zjištění, seznam priorit a plán dalších kroků. Ne jen výpis chyb — ale co řešit první, co může počkat a co dává smysl dělat interně vs. s námi.</p>
+      <p>Ne jen výpis chyb, ale srozumitelný seznam priorit: co opravit jako první, co může počkat a co dává smysl dělat dál.</p>
     </div>
     <div class="audit-card">
-      <h3>Kolik audit stojí</h3>
-      <div class="audit-price">od 2 500 Kč</div>
-      <p class="audit-price-eur">100 €</p>
-      <p>Fixní balíček nemáme — přesnou částku řekneme po krátkém rozboru webu. Úvodní konzultace je zdarma.</p>
+      <h3>Jaký formát potřebuje právě váš web</h3>
+      <p>Pro menší prvotní kontrolu může stačit vstupní SEO diagnostika. Pokud potřebujete hluboký rozbor webu a kompletní plán prací — komplexní SEO audit.</p>
+      <p>Přesný formát určíme podle zadání a stavu webu.</p>
     </div>
     <div class="audit-card">
       <h3>Jak dlouho trvá</h3>
-      <p>Nejdřív konzultace 20–30 min. Samotný audit obvykle v řádu pracovních dní podle velikosti webu a počtu jazykových verzí. Termín upřesníme na začátku.</p>
+      <p>Nejdřív — bezplatná konzultace 20–30 minut.</p>
+      <p>Termín samotné diagnostiky nebo auditu závisí na velikosti webu, počtu stránek a jazykových verzí. Termín upřesníme před začátkem prací.</p>
     </div>
   </div>
   <div class="section-cta section-cta--plain reveal" style="margin-top:36px">
-    <p>Potřebujete SEO audit webu? <a href="#order">Objednat konzultaci →</a></p>
+    <p><a href="#pricing">Podívat se na cenu diagnostiky a SEO auditu →</a></p>
   </div>
 </section>
 
@@ -1119,7 +1182,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
     </div>
   </div>
   <div class="section-cta section-cta--light section-cta--link reveal">
-    <p>Nejste si jisti, kde začít? <a href="#order">Probrat na konzultaci →</a></p>
+    <p>Nejste si jisti, kde začít? <a href="#order" data-sluzba="konsultace">Probrat na konzultaci →</a></p>
   </div>
 </section>
 
@@ -1156,33 +1219,82 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 <section class="pricing-factors" id="pricing">
   <div class="reveal">
     <div class="section-label">Cena SEO</div>
-    <h2 class="section-title">SEO cena a ceník</h2>
-    <p class="section-sub">Kolik stojí SEO optimalizace: bez univerzálního balíčku. Orientační ceník — audit a správa.</p>
+    <h2 class="section-title">Kolik stojí SEO</h2>
+    <p class="section-sub">Cena závisí na zadání a rozsahu práce. Můžete začít jednorázovou diagnostikou nebo auditem, případně přejít na pravidelnou SEO práci. Nejste si jistí, co potřebuje právě váš web? Poradíme.</p>
   </div>
-  <div class="price-anchors stagger reveal">
-    <div class="price-anchor">
-      <div class="pa-num">od 2 500 Kč</div>
-      <span class="pa-eur">100 €</span>
-      <p class="pa-label">SEO audit webu — jednorázová diagnostika</p>
+  <div class="price-consult reveal">
+    <div>
+      <div class="price-badge">20–30 minut — zdarma</div>
+      <h3>Bezplatná konzultace</h3>
+      <p>Hodí se, pokud zatím nevíte, jak na tom váš web z hlediska SEO je a jaký rozsah práce dává smysl.</p>
+      <p>Podíváme se na web, probereme zadání a poradíme, kde začít: vstupní diagnostikou, komplexním auditem nebo pravidelnou SEO prací.</p>
     </div>
-    <div class="price-anchor">
-      <div class="pa-num">od 8 750 Kč/měs</div>
-      <span class="pa-eur">350 € / měs.</span>
-      <p class="pa-label">Správa SEO — měsíční práce a reporty</p>
+    <a href="#order" class="btn-orange" data-sluzba="konsultace">Domluvit bezplatnou konzultaci →</a>
+  </div>
+  <div class="price-offers reveal">
+    <article class="price-offer">
+      <p class="po-kind">Jednorázová diagnostika</p>
+      <h3>Vstupní SEO diagnostika</h3>
+      <div class="po-num">2 900 Kč</div>
+      <p class="po-lead">Rychlá kontrola webu, abychom určili hlavní problémy a příležitosti k růstu.</p>
+      <p class="po-inc">Co kontrolujeme:</p>
+      <ul class="po-list">
+        <li>technický stav webu a indexaci</li>
+        <li>základní kontrolu struktury a obsahu</li>
+        <li>Google Search Console, pokud nám poskytnete přístup</li>
+        <li>hlavní SEO problémy a příležitosti</li>
+        <li>priority: co opravit jako první</li>
+      </ul>
+      <p class="po-out"><strong>Výsledek:</strong> krátký a konkrétní seznam dalších kroků.</p>
+      <a href="#order" class="po-cta" data-sluzba="diagnostika">Objednat diagnostiku →</a>
+    </article>
+    <article class="price-offer">
+      <p class="po-kind">Jednorázový projekt</p>
+      <h3>Komplexní SEO audit</h3>
+      <div class="po-num">od 9 900 Kč</div>
+      <p class="po-lead">Podrobný rozbor webu pro firmy, které potřebují vědět nejen, kde je problém, ale i co konkrétně změnit.</p>
+      <p class="po-inc">Co analyzujeme:</p>
+      <ul class="po-list">
+        <li>technické SEO a indexace</li>
+        <li>struktura webu a URL</li>
+        <li>obsah a on-page SEO</li>
+        <li>title, description a další metadata</li>
+        <li>vyhledávací dotazy</li>
+        <li>analýza konkurence</li>
+        <li>organická návštěvnost a pozice</li>
+        <li>prioritní seznam doporučení</li>
+      </ul>
+      <p class="po-note">Cena závisí na velikosti webu, počtu jazykových verzí a hloubce analýzy.</p>
+      <p class="po-out"><strong>Výsledek:</strong> konkrétní plán oprav a SEO rozvoje s prioritami.</p>
+      <a href="#order" class="po-cta" data-sluzba="audit">Probrat SEO audit →</a>
+    </article>
+    <article class="price-offer">
+      <p class="po-kind">Pravidelná práce</p>
+      <h3>SEO Růst</h3>
+      <div class="po-num">od 12 500 Kč/měs.</div>
+      <p class="po-lead">Pravidelná práce na růstu viditelnosti webu ve vyhledávání a získávání relevantní organické návštěvnosti.</p>
+      <p class="po-inc">Podle aktuálních priorit řešíme:</p>
+      <ul class="po-list">
+        <li>technické SEO a indexaci</li>
+        <li>optimalizaci stávajících stránek</li>
+        <li>nové příležitosti k růstu</li>
+        <li>obsah a strukturu webu</li>
+        <li>title, description a CTR</li>
+        <li>monitoring Google Search Console, pozic a organické návštěvnosti</li>
+        <li>další úpravy na základě výsledků</li>
+      </ul>
+      <p class="po-note">Rozsah práce určujeme podle stavu webu a vašich obchodních cílů — ne podle předem daného seznamu.</p>
+      <p class="po-out"><strong>Každý měsíc víte:</strong> co je hotové, co se změnilo a co děláme dál.</p>
+      <a href="#order" class="po-cta" data-sluzba="rost">Probrat SEO propagaci →</a>
+    </article>
+  </div>
+  <div class="price-help reveal">
+    <div>
+      <h3>Nevíte, co vybrat?</h3>
+      <p>To je v pořádku — nemusíte sami určovat, jestli potřebujete audit, diagnostiku, nebo průběžnou SEO práci.</p>
+      <p><strong>Řekněte nám o webu — navrhneme vhodný další krok.</strong></p>
     </div>
-  </div>
-  <h3 class="price-factors-label">Od čeho závisí cena SEO</h3>
-  <div class="factors-grid stagger reveal">
-    <div class="factor-item"><span class="factor-num">1</span><p>Velikost webu: počet stránek, kategorií, jazykových verzí (RU/CZ/EN/UKR)</p></div>
-    <div class="factor-item"><span class="factor-num">2</span><p>Konkurence v oboru a regionu: Praha, Brno, celá ČR</p></div>
-    <div class="factor-item"><span class="factor-num">3</span><p>Aktuální stav: stačí audit, nebo plné technické SEO</p></div>
-    <div class="factor-item"><span class="factor-num">4</span><p>Rozsah obsahových prací: SEO články, úprava stávajících stránek</p></div>
-    <div class="factor-item" style="grid-column:1/-1"><span class="factor-num">5</span><p>Formát: jednorázový projekt, nebo měsíční správa s reporty</p></div>
-  </div>
-  <div class="price-hint reveal">
-    <p><strong>Bezplatná úvodní konzultace 20–30 min</strong> — první krok. Přesnou částku sdělíme po krátkém rozboru.</p>
-    <p>Potřebujete marketingovou strategii širší než SEO → <a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a> (placená session 90 min, 2 500 Kč / 100 €).</p>
-    <a href="#order" class="btn-orange">Zjistit cenu pro můj web</a>
+    <a href="#order" class="btn-orange" data-sluzba="nevim">Zjistit, co potřebuje můj web →</a>
   </div>
 </section>
 
@@ -1269,7 +1381,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
     </details>
     <details class="faq-item">
       <summary>Kolik SEO stojí? Máte balíčky?</summary>
-      <p>Fixní balíčky nemáme — rozsah práce počítáme individuálně podle webu, oboru a jazykových verzí (RU/CZ/EN/UKR). Orientačně: SEO audit od 2 500 Kč (100 €), měsíční správa od 8 750 Kč/měs (350 €). Přesnou částku sdělíme po krátkém rozboru. Potřebujete marketingovou strategii? Objednejte placenou session (90 minut, 2 500 Kč / 100 €) na <a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a>.</p>
+      <p>Fixní balíčky nemáme. Vstupní SEO diagnostika — 2 900 Kč, komplexní SEO audit — od 9 900 Kč, SEO Růst — od 12 500 Kč/měs. Formát a přesnou částku navrhneme na bezplatné konzultaci 20–30 minut. Potřebujete marketingovou strategii širší než SEO? Placená session 90 minut (2 500 Kč / 100 €) na <a href="https://consult.marketexpert.cz/cs/">consult.marketexpert.cz</a>.</p>
     </details>
     <details class="faq-item">
       <summary>Co zahrnují vaše SEO služby?</summary>
@@ -1338,7 +1450,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
     </button>
     <div class="section-cta section-cta--plain section-cta--center reveal">
       <p>Zůstaly otázky? Pošlete poptávku — odpovíme a navrhneme další krok pro váš web.</p>
-      <a href="#order" class="btn-orange">Objednat konzultaci</a>
+      <a href="#order" class="btn-orange" data-sluzba="konsultace">Objednat konzultaci</a>
     </div>
   </div>
 </section>
@@ -1361,7 +1473,7 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
       <input type="hidden" name="jazyk" value="CS">
       <input type="text" name="_gotcha" value="" tabindex="-1" autocomplete="new-password" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;overflow:hidden" readonly>
       <div class="form-head">
-        <h3>Odeslat poptávku</h3>
+        <h3 id="leadFormTitle">Odeslat poptávku</h3>
         <p>Vyplníte za 40 sekund</p>
       </div>
       <div class="form-grid">
@@ -1380,11 +1492,13 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
         <div class="field field-full">
           <label>Zajímá mě</label>
           <div class="pkg-picker">
-            <label class="pkg-opt"><input type="radio" name="sluzba" value="nevim" checked><span>Ještě nevím</span></label>
-            <label class="pkg-opt"><input type="radio" name="sluzba" value="audit"><span>SEO audit</span></label>
+            <label class="pkg-opt"><input type="radio" name="sluzba" value="konsultace" checked><span>Bezplatná konzultace</span></label>
+            <label class="pkg-opt"><input type="radio" name="sluzba" value="diagnostika"><span>Vstupní SEO diagnostika</span></label>
+            <label class="pkg-opt"><input type="radio" name="sluzba" value="audit"><span>Komplexní SEO audit</span></label>
+            <label class="pkg-opt"><input type="radio" name="sluzba" value="rost"><span>SEO Růst</span></label>
+            <label class="pkg-opt"><input type="radio" name="sluzba" value="nevim"><span>Nevím / potřebuji doporučení</span></label>
             <label class="pkg-opt"><input type="radio" name="sluzba" value="tech"><span>Technické SEO</span></label>
             <label class="pkg-opt"><input type="radio" name="sluzba" value="content"><span>Obsah</span></label>
-            <label class="pkg-opt"><input type="radio" name="sluzba" value="vedeni"><span>Správa SEO</span></label>
             <label class="pkg-opt"><input type="radio" name="sluzba" value="ai"><span>SEO pro AI</span></label>
           </div>
         </div>
@@ -1445,6 +1559,13 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
 <script src="../me-analytics.js"></script>
 <script src="../me-form-adapter.js"></script>
 <script src="../form-success.js"></script>
+<div class="form-modal" id="formModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="leadFormTitle">
+  <div class="form-modal-overlay" data-close-form></div>
+  <div class="form-modal-panel">
+    <button type="button" class="form-modal-x" data-close-form aria-label="Zavřít">&#10005;</button>
+    <div class="form-modal-body" id="formModalBody"></div>
+  </div>
+</div>
 <script>
 (function(){
   function showTyperStatic(typer) {
@@ -1579,18 +1700,62 @@ section { padding: 80px 48px; scroll-margin-top: 84px; }
   });
 })();
 (function(){
-  function pickSluzba(val) {
+  var modal = document.getElementById('formModal');
+  var mount = document.getElementById('formModalBody');
+  var sourceForm = document.getElementById('leadForm');
+  if (!modal || !mount || !sourceForm) return;
+  function pickSluzba(form, val) {
     if (!val || !/^[a-z]+$/.test(val)) return;
-    var radio = document.querySelector('#leadForm input[name="sluzba"][value="' + val + '"]');
+    var radio = form.querySelector('input[name="sluzba"][value="' + val + '"]');
     if (radio) radio.checked = true;
   }
+  function openModal(val) {
+    mount.innerHTML = '';
+    var clone = sourceForm.cloneNode(true);
+    clone.removeAttribute('id');
+    var cloneTitle = clone.querySelector('#leadFormTitle');
+    if (cloneTitle) cloneTitle.removeAttribute('id');
+    pickSluzba(clone, val);
+    [['leadName','name'],['leadEmail','email'],['leadPhone','phone'],['leadMessage','message']].forEach(function(pair) {
+      var input = clone.querySelector('[name="' + pair[1] + '"]');
+      var label = clone.querySelector('label[for="' + pair[0] + '"]');
+      if (input && label) {
+        var modalId = pair[0] + 'Modal';
+        input.id = modalId;
+        label.setAttribute('for', modalId);
+      }
+    });
+    mount.appendChild(clone);
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('form-modal-open');
+    var first = clone.querySelector('input[name="name"]');
+    if (first) setTimeout(function(){ first.focus(); }, 80);
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('form-modal-open');
+    mount.innerHTML = '';
+    if (location.hash === '#order') history.replaceState(null, '', location.pathname + location.search);
+  }
+  window.closeModal = closeModal;
   document.addEventListener('click', function(e) {
     var link = e.target.closest('a[href="#order"]');
-    if (link) pickSluzba(link.getAttribute('data-sluzba'));
+    if (link) {
+      e.preventDefault();
+      openModal(link.getAttribute('data-sluzba'));
+      return;
+    }
+    if (e.target.closest('[data-close-form]')) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
   if (location.hash === '#order') {
     var params = new URLSearchParams(location.search);
-    if (params.get('sluzba')) pickSluzba(params.get('sluzba'));
+    history.replaceState(null, '', location.pathname + location.search);
+    openModal(params.get('sluzba'));
   }
 })();
 document.addEventListener('submit', function(e){
@@ -1623,6 +1788,7 @@ document.addEventListener('submit', function(e){
         btn.classList.add('is-submitted');
         btn.disabled = true;
         form.reset();
+        if (typeof window.closeModal === 'function') window.closeModal();
         if (typeof window.showFormSuccess === 'function') {
           window.showFormSuccess({
             lang: (form.querySelector('input[name="jazyk"]') || {}).value || 'cs',
